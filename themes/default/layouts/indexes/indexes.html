@@ -1,0 +1,12 @@
+{{ template "theme/partials/header.html" . }}
+
+<h1>Archive of Posts, by {{ .Data.Singular }}</h1>
+<ul class="category">
+  {{ $data := .Data }}
+  {{ range $key,$value := $data.Index.ByCount }}
+  <li><a href="/{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> ({{ $value.Count }} entries) </li>
+  {{ end }}
+
+</ul>
+
+{{ template "theme/partials/footer.html" . }}

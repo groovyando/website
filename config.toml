@@ -1,0 +1,39 @@
+url = "http://grails.org.mx"
+name = "GrailsMX"
+description = "Groovy y Grails en tu idioma"
+baseurl = "http://hackergarten.mx/"
+languageCode = "es-MX"
+title = "Groovy y Grails en tu idioma"
+
+pygmentsuseclasses = true
+disqusShortname = "groovyando"
+
+
+Auther = "GrailsMX"
+Autherr = "GrailsMX"
+Profile = "Groovy y Grails en tu idioma"
+TwitterId = "grailsmx"
+GitHubId = "grailsmx"
+GoogleAnaliticsId = "UA-61658224-1"
+
+
+[indexes]
+    category = "categories"
+    tag = "tags"
+
+[params]
+    PublishedDateFormat = "2006-01-02"
+    TimestampFormat = "2006-01-02T15:04:05Z07:00"
+    logo = "<i class=\"fa fa-home\"></i>"
+    cdnprefix = "http://res.cloudinary.com/thehome-dk/image/upload"
+
+[[menu.main]]
+    name = "Home"
+    identifier = "home"
+    url = "/"
+
+[[menu.main]]
+  name = "Articles"
+  identifier = "articles"
+  url = "/article"
+  weight = 1

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ template "theme/partials/meta.html" . }}
+
+    <base href="{{ .Site.BaseUrl }}">
+
+    <!-- Bootstrap -->
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Cabin:400,700" rel="stylesheet" type="text/css">
+
+    <!-- local css -->
+    <link href="css/vurt.css" rel="stylesheet">
+
+    <title>{{ .Title }} : grails.org.mx</title>
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ if .RSSlink }}
+    <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" >
+    {{ end }}
+
+  </head>
+  <body>
+    {{ template "theme/partials/navbar.html" . }}
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">

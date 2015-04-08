@@ -1,0 +1,13 @@
+<h1><a href="{{.Permalink}}">{{.Title}}</a></h1>
+<hr>
+<p><span class="glyphicon glyphicon-time"></span> {{.Date.Format "Mon 2 Jan, 2006"}}</p>
+<hr>
+{{if isset .Params "img"}}
+<div class="feature-img">
+  <img src="{{.Params.img}}" class="img-responsive">
+  <hr>
+</div>
+{{end}}
+<p class="lead">{{.Summary}}</p>
+<a class="btn btn-primary" href="{{.Permalink}}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
+<hr>

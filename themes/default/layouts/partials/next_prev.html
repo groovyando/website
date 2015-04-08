@@ -1,0 +1,6 @@
+    <section id="next">
+      {{if .Next}}<a class="next" href="{{.Next.Permalink}}"><i class="glyphicon glyphicon-chevron-left"></i> {{.Next.Title}}</a>{{end}}
+    </section>
+    <section id="prev">
+      {{if .Prev}}<a class="previous" href="{{.Prev.Permalink}}"><i class="glyphicon glyphicon-chevron-right"></i> {{.Prev.Title}}</a><br>{{end}}
+    </section>

@@ -1,0 +1,39 @@
+{{ $baseurl := .Site.BaseUrl }}
+{{ template "theme/partials/header.html" . }}
+
+<h1>{{.Title}}</h1>
+<hr>
+{{if isset .Params "img"}}
+<img src="{{.Params.img}}" class="img-responsive">
+<hr>
+{{end}}
+{{.Content}}
+<hr>
+{{ if .Site.DisqusShortname }}
+    <section id="disqus_thread">
+    {{ template "_internal/disqus.html" . }}
+    </section>
+    {{ end }}
+
+</div>
+<div class="col-lg-4">
+  <div id="toc" class="well">
+    <section id="info">
+      <p><span class="glyphicon glyphicon-time"></span> Posted on {{.Date.Format "Mon 2 Jan, 2006"}}</p>
+      <p class="entry-reading-time">
+            <i class="fa fa-clock-o"></i>
+            Reading time ~{{ .ReadingTime }} minutes
+          </p>
+      <p class="entry-reading-time">
+            <i class="fa fa-user"></i>
+            {{ if isset .Params "author" }}<span class="author vcard"><span class="fn"><a href="{{ .Site.BaseUrl }}/about/" title="About {{ .Site.Params.Author }}">{{ .Params.author }}</a></span></span>{{ end }}
+          </p>
+          
+    </section>
+
+    {{ template "theme/partials/social.html" . }}
+    {{ template "theme/partials/next_prev.html" . }}
+    
+  </div>
+
+{{ template "theme/partials/footer.html" . }}

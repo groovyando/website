@@ -1,0 +1,12 @@
+{{ template "theme/partials/header.html" . }}
+<h1>Recent Posts</h1>
+<h5><a href="/categories">Full Category Index</a></h5>
+<h2>Posts in &ldquo;{{ .Title }}&rdquo;</h2>
+{{ range .Data.Pages }}
+<h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+<hr>
+<p class="lead">{{.Summary}}</p>
+<hr>
+{{ end }}
+
+{{ template "theme/partials/footer.html" . }}
