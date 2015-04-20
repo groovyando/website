@@ -55,55 +55,69 @@ Using gradle version 1.11 in this shell
 $ gvm list candidate
 ```
 
-Se describieron los conceptos de gaiden, gradle, grails, griffon, glide, groovy, groovyserv, lazybones, springboot, vertx.
+Se describieron los conceptos de [Gaiden][15], [Gradle][3], [Grails][16], [Griffon][17], [Glide][18], [Groovy][12], [groovyserv][19], [lazybones][20], [springboot][21], [vertx][22].
 
-Con Gradle instalado se puede dar mucha información. Gradle ha causado tanto furor que incluso Maven ha copiado ideas.
+Con [Gradle][3] instalado se puede dar mucha información. [Gradle][3] ha causado tanto furor que incluso [Maven][6] ha copiado ideas.
 
-Si se ejecuta gradle sin argumentos, termina sin argumentos. Puede listar tareas.
+Si se ejecuta [gradle][3] sin argumentos, termina sin argumentos. Puede listar tareas.
 
-Comencemos construyendo el build.gradle. Para construir un proyecto Java siguiendo las convenciones de Maven basta con aplicar un plugin.
+Comencemos construyendo el `build.gradle`. Para construir un proyecto _Java_ siguiendo las convenciones de [Maven][6] basta con aplicar un _plugin_.
 
-<pre>apply plugin: 'java'</pre>
+```gradle
+apply plugin: 'java'
+```
 
-En Java las comillas dobles y el signo de pesos la vuelve variable mutable. Eso es lo único que debe hacerse por el momento.
+En _Java_ las comillas dobles y el signo de pesos la vuelve variable mutable. Eso es lo único que debe hacerse por el momento.
 
-Una vez guardado el archivo se disponen de muchas más tareas. Por ejemplo, check o test para verificaar.
+Una vez guardado el archivo se disponen de muchas más tareas. Por ejemplo, _check_ o _test_ para verificar.
 
-<pre>&gt; gradle build</pre>
+```bash
+$ gradle build
+```
 
-Mustra el orden en que se ejecutan las tareas. Comprueba si las entradas o las salidas han cambiado y salta las que detecta sin cambios. Se guarda el caché en ~/.gradle por referencia, reduciendo tiempos. Ni siquiera Maven 4 lo tiene. En multiproyectos, Maven realiza las pruebas 2 veces.
+Mustra el orden en que se ejecutan las tareas. Comprueba si las entradas o las salidas han cambiado y salta las que detecta sin cambios. Se guarda el caché en `~/.gradle` por referencia, reduciendo tiempos. Ni siquiera [Maven 4][6] lo tiene. En multiproyectos, [Maven][6] realiza las pruebas 2 veces.
 
-La primera vez que se ejecuta gradle se levanta un daemon que se va al fondo.
+La primera vez que se ejecuta [Gradle][3] se levanta un _daemon_ que se va al fondo.
 
-<pre>&gt; gradle wrapper
+```bash
+$ gradle wrapper
 
-Build successful</pre>
+Build successful
+```
 
-Crea un directorio gradle para ejecutarse en entornos sin gradle. Con gradlew el build es 100% reproducible y si la otra persona no tiene tal herramienta. Maven y Tesla han dado de ellos.
+Crea un directorio [Gradle][3] para ejecutarse en entornos sin [Gradle][3]. Con _gradlew_ el _build_ es 100% reproducible y si la otra persona no tiene tal herramienta. Maven y Tesla han dado de ellos.
 
-<pre>&gt; gradle clean</pre>
+```bash
+$ gradle clean
+```
 
 Limpia el asunto.
 
-<pre>&gt; gradle build</pre>
+```bash
+$ gradle build
+```
 
-En build.gradle
+En `build.gradle`
 
-<pre>apply plugin: 'java'
+```gradle
+apply plugin: 'java'
 
 version = '1.0.0.SNAPSHOT'
 
--- El scope provided de Maven aún no está en Gradle
+// El scope provided de Maven aún no está en Gradle
+```
 
-&gt; gradle clean build
-
-&gt; tree</pre>
+```bash
+$ gradle clean build
+$ tree
+```
 
 Se muestra el contenido
 
-En build.gradle
+En `build.gradle`
 
-<pre>apply plugin: 'java'
+```gradle
+apply plugin: 'java'
 
 version = '1.0.0.SNAPSHOT'
 
@@ -113,17 +127,19 @@ jar {
          'LLAVE': 'VALOR'
       )
    }
-}</pre>
+}
+```
 
-En el manifest se puede agregar quién construyó el proyecto, variables y cualquier info que se quiera agregar.
+En el _manifest_ se puede agregar quién construyó el proyecto, variables y cualquier info que se quiera agregar.
 
-En gradle-plugins (aalmiray.github.io/gradle-plugins/) se encuentra una lista extraoficial.
+En [gradle-plugins][23] se encuentra una lista extraoficial.
 
-El repositorio utiliza las convenciones de Maven. Si no se conffigura nada, el repositorio predeterminado es inexistente.
+El repositorio utiliza las convenciones de [Maven][6]. Si no se configura nada, el repositorio predeterminado es inexistente.
 
-En build.gradle
+En `build.gradle`
 
-<pre>apply plugin: 'java'
+```gradle
+apply plugin: 'java'
 
 version = '1.0.0.SNAPSHOT'
 
@@ -137,13 +153,15 @@ jar {
          'LLAVE': 'VALOR'
       )
    }
-}</pre>
+}
+```
 
-Cuando se hace un proyecto Maven, no debe especificarse que se trata de un proyecto. Gradle no asume de qué repositorio va a jalar las dependencias.
+Cuando se hace un proyecto [Maven][6], no debe especificarse que se trata de un proyecto. [Gradle][3] no asume de qué repositorio va a jalar las dependencias.
 
-En build.gradle
+En `build.gradle`
 
-<pre>apply plugin: 'java'
+```gradle
+apply plugin: 'java'
 
 version = '1.0.0.SNAPSHOT'
 
@@ -165,89 +183,114 @@ jar {
          'LLAVE': 'VALOR'
       )
    }
-}</pre>
-
-Con paquetes como bitrade, jcenter, administración de binarios de manera social. Resuelve más rápido que Maven Central y bitrate permite incluso que tu paquete se pueda compartir a Maven Central, si tienes cuenta en Sonatype. Algo que no les gusta a Sonatype es especificar dependencias a repos locales. Es más flexible. Grails 2.4 debe tenerlo.
-
-Hay mucha sinergia en el ecosistema Groovy.
-
-<pre>&gt; mkdir -p src/test/java/sample</pre>
-
-Snapshots son mucho mejor.
-
-<pre>En FooTest.java
-package sample;
-
-import org,.junit.*;
-import static.org.junit.Assert.*;
-
-public class FooTest {
-    @Test
-   public void probarSaludar() {
-       Foo foo = new Foo();
-       String resultado = foo.saludar(“Java”);
-       assertEquals(“Hola Java”, resultado);
 }
+```
 
-En Foo.java:
+Con paquetes como [bintray][24], [jcenter][25], administración de binarios de manera social. Resuelve más rápido que [Maven Central][26] y [bintray][24] permite incluso que tu paquete se pueda compartir a [Maven Central][26], si tienes cuenta en [Sonatype][27]. Algo que no les gusta a [Sonatype][27] es especificar dependencias a _repos_ locales. Es más flexible. [Grails 2.4][16] debe tenerlo.
 
-public class Foo {
-  public stati8c void main (String[] args)
+Hay mucha sinergia en el ecosistema [Groovy][12].
 
-&gt; gradle test</pre>
+```bash
+$ mkdir -p src/test/java/sample
+```
 
-La primera vez, 1.6 segundos, la segunda, 0.5. En gradle se pueden paralelizar las pruebas.
+_Snapshots_ son mucho mejor.
 
-Reportes: Junit no tiene un estándar ni definición de reportes.
+En `FooTest.java`
 
-<pre>Haciendo que falle la prueba, En FooTest.java
+```java
 package sample;
 
 import org,.junit.*;
 import static.org.junit.Assert.*;
 
 public class FooTest {
-    @Test
-   public void probarSaludar() {
-       Foo foo = new Foo();
-       String resultado = foo.saludar(“Java”);
-       assertEquals(“Hola Groovy”, resultado);
-}</pre>
+  @Test
+  public void probarSaludar() {
+    Foo foo = new Foo();
+    String resultado = foo.saludar(“Java”);
+    assertEquals(“Hola Java”, resultado);
+  }
+}
+```
+
+En `Foo.java`:
+
+```java
+public class Foo {
+  public static void main (String[] args) {
+  }
+}
+```
+
+```bash
+$ gradle test
+```
+
+La primera vez, 1.6 segundos, la segunda, 0.5. En [Gradle][3] se pueden paralelizar las pruebas.
+
+Reportes: [Junit][28] no tiene un estándar ni definición de reportes.
+
+Haciendo que falle la prueba, En `FooTest.java`
+
+```java
+package sample;
+
+import org,.junit.*;
+import static.org.junit.Assert.*;
+
+public class FooTest {
+  @Test
+  public void probarSaludar() {
+    Foo foo = new Foo();
+    String resultado = foo.saludar(“Java”);
+    assertEquals(“Hola Groovy”, resultado);
+  }
+}
+```
 
 Ahora el reporte muestra la falla.
 
-En múltiples proyectos. Un problema con Maven es que no se nota si un hermano ha cambiado. Todo lo que cambia, se ejecuta, y luego el segundo hermano.
+En múltiples proyectos. Un problema con [Maven][26] es que no se nota si un hermano ha cambiado. Todo lo que cambia, se ejecuta, y luego el segundo hermano.
 
 Creamos un directorio multi y dos subproyectos
 
-<pre>&gt; mkdir multi
-&gt; cd multi
-&gt; mkdir core ext
-&gt; mkdir -p core/src/main/java/foo
-&gt; mkdir -p ext/src/main/java/foo</pre>
+```bash
+$ mkdir multi
+$ cd multi
+$ mkdir core ext
+$ mkdir -p core/src/main/java/foo
+$ mkdir -p ext/src/main/java/foo
+```
 
-En el core generamos una clase Version.java
+En el core generamos una clase `Version.java`
 
-<pre>public class Version {
-   public static int getVersion() {
-      return 1;
-   }
-}</pre>
+```java
+public class Version {
+  public static int getVersion() {
+    return 1;
+  }
+}
+```
 
 Luego en el de extensión:
 
-<pre>Extension.java
+`Extension.java`
+
+```java
 package foo;
 
 public class Extension {
-   pulbic String getNombre() {
-      return “Foo: “ + version”
-   }
-}</pre>
+  public String getNombre() {
+    return “Foo: “ + version”;
+  }
+}
+```
 
-En build.gradle
+En `build.gradle`
 
-<pre>apply plugin: 'base'
+```gradle
+apply plugin: 'base'
 
 version = '0.0.0.SNAPSHOT'
 
@@ -263,25 +306,31 @@ subprojects {
    dependencies {
       testCompile 'junit:junit:4.11'
    }
-}</pre>
+}
+```
 
 Con esto se evita duplicar info para proyectos hijos.
 
-El build.gradle del core debe estar vacío en los proyectos hijos.
+El `build.gradle` del _core_ debe estar vacío en los proyectos hijos.
 
-En el build del proyecto hermano:
+En el _build_ del proyecto hermano:
 
-<pre>dependencies {
+```gradle
+dependencies {
    compile project(':core')
-}</pre>
+}
+```
 
 Por último, un archivo adicional le dice cuáles son los subproyectos que dirán cuáles son los subproyectos que incluirá:
 
-<pre>settings.gradle
-include 'core'
-include 'ext'</pre>
+`settings.gradle`
 
-En el raíz se especifica, bajo settings.gradle, la ruta y nombre de dónde se encuentra cada proyecto.
+```
+include 'core'
+include 'ext'
+```
+
+En el raíz se especifica, bajo `settings.gradle`, la ruta y nombre de dónde se encuentra cada proyecto.
 
 “${fileBAseName}.gradle”, el caso de una variable.
 
@@ -503,3 +552,17 @@ Y así de repente se fueron las horas, se quedó con ganas de seguir, y precisam
  [12]: http://groovy-lang.org/
  [13]: http://en.wikipedia.org/wiki/Integrated_development_environment
  [14]: http://gvmtool.net/
+ [15]: http://kobo.github.io/gaiden/
+ [16]: https://grails.org/
+ [17]: http://new.griffon-framework.org/
+ [18]: https://glide-gae.appspot.com/
+ [19]: http://kobo.github.io/groovyserv/
+ [20]: https://github.com/pledbrook/lazybones
+ [21]: http://projects.spring.io/spring-boot/
+ [22]: http://vertx.io/
+ [23]: http://aalmiray.github.io/gradle-plugins/
+ [24]: https://bintray.com/
+ [25]: https://bintray.com/bintray/jcenter
+ [26]: http://search.maven.org/
+ [27]: http://central.sonatype.org/
+ [28]: http://junit.org/

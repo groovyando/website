@@ -26,6 +26,7 @@ GoogleAnaliticsId = "UA-61658224-1"
     TimestampFormat = "2006-01-02T15:04:05Z07:00"
     logo = "<i class=\"fa fa-home\"></i>"
     cdnprefix = "http://res.cloudinary.com/thehome-dk/image/upload"
+    highlight = "tomorrow-night"
 
 [[menu.main]]
     name = "Home"

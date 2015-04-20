@@ -29,6 +29,8 @@
     <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Title }}" >
     {{ end }}
 
+    {{ if isset .Site.Params "highlight" }}<link rel="stylesheet" href="{{ .Site.BaseUrl }}/css/highlight/{{ .Site.Params.highlight }}.css">{{ end }}
+
   </head>
   <body>
     {{ template "theme/partials/navbar.html" . }}
