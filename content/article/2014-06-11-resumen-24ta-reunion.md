@@ -12,43 +12,48 @@ categories:
 tags:
   - reunion
 ---
-Comenzaba el mes de abril. Un día medio soleado despuntaba para revivir un tiempo que marcó época, el tiempo en que al menos cada mes nos reuníamos y compartíamos sobre la tecnología que nos apasionaba. Y ese sábado, como el primero de ellos, como algunos otros, como parecía que tenía uno o dos meses sin vernos, aquél sábado 5, Andrés Almiray (@aalmiray en Twitter), el padrino de las reuniones, nos habló de Gradle y Spock.
+Comenzaba el mes de abril. Un día medio soleado despuntaba para revivir un tiempo que marcó época, el tiempo en que al menos cada mes nos reuníamos y compartíamos sobre la tecnología que nos apasionaba. Y ese sábado, como el primero de ellos, como algunos otros, como parecía que tenía uno o dos meses sin vernos, aquél sábado 5, [Andrés Almiray][2] ([@aalmiray][1]), el padrino de las reuniones, nos habló de [Gradle][3] y [Spock][5].
 
 Así fue que caímos en cuenta cuánto tiempo había pasado, que nuestro espíritu quedó ligeramente aletargado, y las comunidades, inactivas. El expositor inició recordando la primera reunión que se dio, los orígenes de las charlas y la actividad que se tuvo durante todo el tiempo, y después, la pasividad. Si bien, hubo algunas reuniones entre semana el año pasado, dejaron también de suceder, y con esta charla, exhortó a seguir, a continuar con este espacio de colaboración, de la manera como sabemos: compartiendo tecnología.
 
-En pocas palabras, los temas fueron Gradle, para construcción de proyectos, y Spock, para pruebas. Sometió a votación con cuál iniciar, y los asistentes decantamos en favor de Gradle. Inició con una breve historia de los programas para la construcción de proyectos en Java. Apache Maven se usa ampliamente, sin vérsele mucho problema. Si comparamos Maven contra Ant, tiene ciertas ventajas. Empero, en el día a día, sus problemas son tan cotidianos que los dejamos pasar. En la JVM ningún constructor de proyectos existía. Con la llegada de Apache Ant se pudo hacer mucho, pero su enorme flexibilidad era su problema, porque debía declararse extensivamente cada tarea que se habría de ejecutar.
+En pocas palabras, los temas fueron [Gradle][3], para construcción de proyectos, y [Spock][5], para pruebas. Sometió a votación con cuál iniciar, y los asistentes decantamos en favor de [Gradle][3]. Inició con una breve historia de los programas para la construcción de proyectos en Java. [Apache Maven][6] se usa ampliamente, sin vérsele mucho problema. Si comparamos [Maven][6] contra [Ant][7], tiene ciertas ventajas. Empero, en el día a día, sus problemas son tan cotidianos que los dejamos pasar. En la JVM ningún constructor de proyectos existía. Con la llegada de [Apache Ant][7] se pudo hacer mucho, pero su enorme flexibilidad era su problema, porque debía declararse extensivamente cada tarea que se habría de ejecutar.
 
-Una mejora para Maven 1 fue la programación declarativa con XML mediante Jelly. Con Maven 2 llegaron los MOJO, versión de POJO «a la Maven» conduciendo plugins que hicieron más rígido el procedimientlo y agregaron otro problema sobre conflictos de versiones. Por el lado positivo, Maven dio un estándar para manejar relaciones en dependencias. Ivy, en estado zombie, descarga dependencias para Ant. Maven parece ser el estándar, pues se usa en muchos lados. El problema en que si se deja de declarar la versión exacta de dependencias, Maven actualiza los paquetes. Deben definirse versiones transitivas y contra qué versión de la JDK se trabaja.
+Una mejora para Maven 1 fue la programación declarativa con _XML_ mediante [Jelly][8]. Con Maven 2 llegaron los _MOJO_, versión de _POJO_ «a la Maven» conduciendo plugins que hicieron más rígido el procedimientlo y agregaron otro problema sobre conflictos de versiones. Por el lado positivo, [Maven][6] dio un estándar para manejar relaciones en dependencias. [Ivy][9], en estado zombie, descarga dependencias para [Ant][7]. [Maven][6] parece ser el estándar, pues se usa en muchos lados. El problema en que si se deja de declarar la versión exacta de dependencias, [Maven][6] actualiza los paquetes. Deben definirse versiones transitivas y contra qué versión de la _JDK_ se trabaja.
 
-Un ejemplo típico es al utilizar Jetty, Maven lo actualizaba automáticamente a la versión estable. Eso rompía la posibilidad de tener builds reproducibles. Por supuesto que Maven funciona, tan funciona que de cierta manera se ha vuelto «de facto», el repositorio central de Maven, nada más por mencionar algo, pero tiene muchos problemas que se repiten enormemente.
+Un ejemplo típico es al utilizar [Jetty][10], [Maven][6] lo actualizaba automáticamente a la versión estable. Eso rompía la posibilidad de tener builds reproducibles. Por supuesto que [Maven][6] funciona, tan funciona que de cierta manera se ha vuelto «de facto», el repositorio central de Maven, nada más por mencionar algo, pero tiene muchos problemas que se repiten enormemente.
 
-En las primeras versiones de Tomcat, se generó Ant con XML, a finales del milenio pasado, cada vez que se debía externalizar un concepto, se usaba XML, el autor del futuro. El autor de Ant pidió disculpas por haber usado XML. El segundo problema, se compilan fuentes, se procesan recursos, y se ejecutan pruebas en cada fase. El árbol de definición de metas es muy rígida, solo se pueden eliminar metas, dejando poco flexible para comportamiento pre o post para una meta. Y muy probablemente se le ocurrirán más ejemplos similares.
+En las primeras versiones de [Tomcat][11], se generó [Ant][7] con _XML_, a finales del milenio pasado, cada vez que se debía externalizar un concepto, se usaba _XML_, el autor del futuro. El autor de [Ant][7] pidió disculpas por haber usado _XML_. El segundo problema, se compilan fuentes, se procesan recursos, y se ejecutan pruebas en cada fase. El árbol de definición de metas es muy rígida, solo se pueden eliminar metas, dejando poco flexible para comportamiento pre o post para una meta. Y muy probablemente se le ocurrirán más ejemplos similares.
 
 ## Gradle
 
 <iframe src="https://player.vimeo.com/video/93213844" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-Gradle, con base en la experiencia de los sistemas anteriores, permite una flexibilidad para una meta. Gradle permite tips para brincar. Build helper permitía juntar proyectos de distintas naturalezas para construir, pero deja de ser agradable por plugins que requieren acceso a múltiples fuentes. Proyectos similares que conduzcan a distintas versiones de JDK todavía requerirán proyectos separados. La mayoría de Gradle está construido en Java, solo tiene una capa de Groovy encima, para tener una definición declarativa. Pueden escribirse sus plugins en Groovy o Java.
+[Gradle][3], con base en la experiencia de los sistemas anteriores, permite una flexibilidad para una meta. [Gradle][3] permite tips para brincar. _Build helper_ permitía juntar proyectos de distintas naturalezas para construir, pero deja de ser agradable por _plugins_ que requieren acceso a múltiples fuentes. Proyectos similares que conduzcan a distintas versiones de _JDK_ todavía requerirán proyectos separados. La mayoría de [Gradle][3] está construido en _Java_, solo tiene una capa de [Groovy][12] encima, para tener una definición declarativa. Pueden escribirse sus _plugins_ en [Groovy][12] o _Java_.
 
-El expositor creó un directorio. Gradle puede seguir las convenciones de Maven u omitirlas.
+El expositor creó un directorio. [Gradle][3] puede seguir las convenciones de [Maven][6] u omitirlas.
 
 `src/main/java/sample` y allí crea una nueva clase.
 
-Foo.java – En un principio no había IDEs, para mucha gente el IDE estorba. Para muchos, ni siquiera el public void static main puede verse claro, o es más, cómo se ejecuta.
+`Foo.java` – En un principio no había [IDEs][13], para mucha gente el [IDE][13] estorba. Para muchos, ni siquiera el `public void static main` puede verse claro, o es más, cómo se ejecuta.
 
-<pre>Package sample;
+
+```java
+Package sample;
 public class Foo {
-public stati8c void main (String[] args)</pre>
+public stati8c void main (String[] args)
+```
 
-Una clase simple.
+> Una clase simple.
 
-En www.gradle.org tienen soporte profesional, pero generalmente se trata de desde descargar un zip y se agrega una variable de entorno. Recomienda usar GVM y lo puso con ejemplo:
+En [www.gradle.org][3] tienen soporte profesional, pero generalmente se trata de desde descargar un zip y se agrega una variable de entorno. Recomienda usar [GVM][14] y lo puso con ejemplo:
 
-<pre>&gt; gvm u gradle 1.11
+```bash
+$ gvm u gradle 1.11
 
 Using gradle version 1.11 in this shell
 
-&gt; gvm list candidate</pre>
+$ gvm list candidate
+```
 
 Se describieron los conceptos de gaiden, gradle, grails, griffon, glide, groovy, groovyserv, lazybones, springboot, vertx.
 
@@ -483,5 +488,18 @@ Springboot – Ratpack – es otro proyecto a considerar.
 [Mensaje breve del fundador de grails.org.mx para pedir ayuda de la comunidad][4] from [Grails.org.mx][2] on [Vimeo][3].
 
 Y así de repente se fueron las horas, se quedó con ganas de seguir, y precisamente es el sentimiento que estas breves líneas desean impregnar: es momento de hacer florecer nuestras comunidades. Es tiempo de recuperar y continuar nuestra dinámica&#8230; pero esa, es otra historia, historia que invitamos a colaborar juntos, hombro con hombro.
-
+ 
+ [1]: http://twitter.com/aalmiray
+ [2]: http://www.jroller.com/aalmiray/
+ [3]: https://gradle.org/
  [4]: http://vimeo.com/92464572
+ [5]: http://spockframework.org
+ [6]: https://maven.apache.org/
+ [7]: http://ant.apache.org/
+ [8]: http://commons.apache.org/proper/commons-jelly/
+ [9]: http://ant.apache.org/ivy/
+ [10]: http://eclipse.org/jetty/
+ [11]: http://tomcat.apache.org/
+ [12]: http://groovy-lang.org/
+ [13]: http://en.wikipedia.org/wiki/Integrated_development_environment
+ [14]: http://gvmtool.net/
