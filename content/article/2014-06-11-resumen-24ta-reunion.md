@@ -10,7 +10,7 @@ categories:
   - Groovy
   - Podcast Grails
 tags:
-  - reunión
+  - reunion
 ---
 Comenzaba el mes de abril. Un día medio soleado despuntaba para revivir un tiempo que marcó época, el tiempo en que al menos cada mes nos reuníamos y compartíamos sobre la tecnología que nos apasionaba. Y ese sábado, como el primero de ellos, como algunos otros, como parecía que tenía uno o dos meses sin vernos, aquél sábado 5, Andrés Almiray (@aalmiray en Twitter), el padrino de las reuniones, nos habló de Gradle y Spock.
 
@@ -26,15 +26,13 @@ En las primeras versiones de Tomcat, se generó Ant con XML, a finales del milen
 
 ## Gradle
 
-
-
-[Charla de Andres Almiray sobre Gradle en #sh24][1] from [Grails.org.mx][2] on [Vimeo][3].
+<iframe src="https://player.vimeo.com/video/93213844" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Gradle, con base en la experiencia de los sistemas anteriores, permite una flexibilidad para una meta. Gradle permite tips para brincar. Build helper permitía juntar proyectos de distintas naturalezas para construir, pero deja de ser agradable por plugins que requieren acceso a múltiples fuentes. Proyectos similares que conduzcan a distintas versiones de JDK todavía requerirán proyectos separados. La mayoría de Gradle está construido en Java, solo tiene una capa de Groovy encima, para tener una definición declarativa. Pueden escribirse sus plugins en Groovy o Java.
 
 El expositor creó un directorio. Gradle puede seguir las convenciones de Maven u omitirlas.
 
-src/main/java/sample y allí crea una nueva clase.
+`src/main/java/sample` y allí crea una nueva clase.
 
 Foo.java – En un principio no había IDEs, para mucha gente el IDE estorba. Para muchos, ni siquiera el public void static main puede verse claro, o es más, cómo se ejecuta.
 
@@ -486,7 +484,4 @@ Springboot – Ratpack – es otro proyecto a considerar.
 
 Y así de repente se fueron las horas, se quedó con ganas de seguir, y precisamente es el sentimiento que estas breves líneas desean impregnar: es momento de hacer florecer nuestras comunidades. Es tiempo de recuperar y continuar nuestra dinámica&#8230; pero esa, es otra historia, historia que invitamos a colaborar juntos, hombro con hombro.
 
- [1]: http://vimeo.com/93213844
- [2]: http://vimeo.com/grailsmx
- [3]: https://vimeo.com
  [4]: http://vimeo.com/92464572
