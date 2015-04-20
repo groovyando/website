@@ -332,71 +332,78 @@ include 'ext'
 
 En el raíz se especifica, bajo `settings.gradle`, la ruta y nombre de dónde se encuentra cada proyecto.
 
-“${fileBAseName}.gradle”, el caso de una variable.
+`“${fileBAseName}.gradle”`, el caso de una variable.
 
-Al ejecutar el gradle del proyecto core, primero compila el core, luego la extensión, similar a Maven Reactor.
+Al ejecutar el _Gradle_ del proyecto core, primero compila el core, luego la extensión, similar a _Maven Reactor_.
 
 En el directorio de extensión, al cambiar la entrada, verifica si los recursos de entrada cambia. Con esto se evita trabajar con binarios desactualizados.
 
 Puede pedirse que se limpie y se recompile
 
-<pre>&gt; gradle :core:clean
+```bash
+$ gradle :core:clean
 
-&gt; gradle :core:test</pre>
+$ gradle :core:test
+```
 
 Esas son grandes ventajas. El  proyecto que siga, que supere esto, en sus palabras, «será la bomba».
 
 Para agregar dependencias solo a ciertos hijos
 
-<pre>subprojects {suproject -&gt;
+```gradle
+subprojects {suproject ->
    if (subproject.name == 'persistencia' {
       compile 'org.hibernate:hibernate:123'
 
- O bien, con persistencias de Groovy:
+ // O bien, con persistencias de Groovy:
    if (subproject.name =~ /-persistencia/ {
-      compile 'org.hibernate:hibernate:123'</pre>
+      compile 'org.hibernate:hibernate:123'
+```
 
 Para plugin management
 
-<pre>ext.hibernateVersion = '123'</pre>
+```
+ext.hibernateVersion = '123'
+```
 
-Se pueden agregar propiedades en gradle.properties
+Se pueden agregar propiedades en `gradle.properties`
 
-<pre>ext.hbiernateVersion = '123'</pre>
+```
+ext.hibernateVersion = '123'
+```
 
-Para integración continua, dependiendo el servidor de integración, por ejemplo travis.ml. After success pide a Gradle un generado para toda la cobertura. El ambiente de integración continua debe proporcionar la facilidad.
+Para integración continua, dependiendo el servidor de integración, por ejemplo `travis.yml`. _After success_ pide a _Gradle_ un generado para toda la cobertura. El ambiente de integración continua debe proporcionar la facilidad.
 
-Con maven-publish se puede publicar a MavenLocal.
+Con `maven-publish` se puede publicar a MavenLocal.
 
-El pom se puede agregar una configuración declarativa
+El `pom` se puede agregar una configuración declarativa
 
-Algo para mencionar: estos archivos se ejecutan dos veces. La primera vez, para configuración, qué cosas son posibles, qué tareas, qué configs o repos y la fase de ejecución, cuando el grafo de tareas se construyó, y pueden agregarse o modificarse tareas. La documentación de Gradle es muy buena, superior a la de Maven. No solo basta qué tareas adicionales debo tener, sino qué tareas se ejecutan antes y después. En Maven se ejecutan alfabéticamente si usan Junit, o todo revuelto.
+Algo para mencionar: estos archivos se ejecutan dos veces. La primera vez, para configuración, qué cosas son posibles, qué tareas, qué configs o repos y la fase de ejecución, cuando el grafo de tareas se construyó, y pueden agregarse o modificarse tareas. La documentación de _Gradle_ es muy buena, superior a la de _Maven_. No solo basta qué tareas adicionales debo tener, sino qué tareas se ejecutan antes y después. En _Maven_ se ejecutan alfabéticamente si usan _Junit_, o todo revuelto.
 
 Puede especificarse si la tarea tiene éxito o fallo, se genere un reporte y que se hagan todas las pruebas de calidad. Al tener el control del orden, se compilan las pruebas, incluso de integración, una sola vez.
 
-Pueden obtenerse jars locales y agregarse con flatDir o mediante MavenLocal.
+Pueden obtenerse _jars_ locales y agregarse con _flatDir_ o mediante _MavenLocal_.
 
-MOJOs desde Gradle, el problema es el orden de búsqueda. No puede usarse el binario, pero el fuente sí.
+_MOJOs_ desde _Gradle_, el problema es el orden de búsqueda. No puede usarse el binario, pero el fuente sí.
 
-grade.org describe DCL y sus plugins. Al menos 3 libros de O&#8217;Reilly, mrhaki.glogspot.com con nuevas monerías de features de gradle, groovy.
+grade.org describe _DSL_ y sus plugins. Al menos 3 libros de O`Reilly, [Mr haki][29] con nuevas monerías de features de _Gradle_, _Groovy_.
 
-Es posible desde Gradle ejecutar tareas de Ant. No necesariamente de Maven, por bootstrap, debe configurarse una instancia adecuada. Pero se puede traducir la fuente del MOJO.
+Es posible desde _Gradle_ ejecutar tareas de _Ant_. No necesariamente de _Maven_, por _bootstrap_, debe configurarse una instancia adecuada. Pero se puede traducir la fuente del _MOJO_.
 
-<hr width="35%" />
+> El receso fue reencontrarse con viejos amigos, conocer a nuevos y constatar que la tecnología avanza, pero es el factor humano quien le da sentido y los lazos humanos, la barrera donde nunca llegarán las computadoras. Pero en lo que sí son buenas las computadoras es en automatizar procesos, clasificar información y hacer cosas repetitivas tantas veces como se requieran. Y de eso habló el segundo tema, pruebas con [Spock][5].
 
-El receso fue reencontrarse con viejos amigos, conocer a nuevos y constatar que la tecnología avanza, pero es el factor humano quien le da sentido y los lazos humanos, la barrera donde nunca llegarán las computadoras. Pero en lo que sí son buenas las computadoras es en automatizar procesos, clasificar información y hacer cosas repetitivas tantas veces como se requieran. Y de eso habló el segundo tema, prubas con Spock.
-
-<hr width="35%" />
 
 ## Spock
 
-El autor, austriaco, es un Trekie. El DSL de pruebas es lógico, evidente para crear las cosas. Puede incluso hacer dependencias circulares.
+El autor, austriaco, es un _Trekie_. El _DSL_ de pruebas es lógico, evidente para crear las cosas. Puede incluso hacer dependencias circulares.
 
-Escribió una prueba de Junit a la Java. Deben generarse campos para la prueba, un constructor y la inicialización de los parámetros. JunitUtils permite la parametrización de pruebas mucho más sencilla. Básicamente se crean casos de pruebas, uno por cada renglón.
+Escribió una prueba de _Junit_ a la Java. Deben generarse campos para la prueba, un constructor y la inicialización de los parámetros. JunitUtils permite la parametrización de pruebas mucho más sencilla. Básicamente se crean casos de pruebas, uno por cada renglón.
 
-En Spock es mucho más sencillo.
+En [Spock][5] es mucho más sencillo.
 
-<pre>FooSpeck.groovy
+`FooSpeck.groovy`
+
+```groovy
 package foo
 
 import spock.lang.*
@@ -414,13 +421,15 @@ class FooSpec extends Specification {
          names[1] == 'Kirk'
          names[2] == 'Bones'
    }
-}</pre>
+}
+```
 
 La primera parte es probar sin demasiados asserts. Si falla uno, ignoraremos si los demás también fallaba.
 
-FooSpeck.groovy
+`FooSpeck.groovy`
 
-<pre>package foo
+```groovy
+package foo
 
 import spock.lang.*
 
@@ -429,75 +438,28 @@ class FooSpec extends Specification {
       expect:
          name.capitalize() == expected
       where:
-         name  | expected
+         name   | expected
         'spock' | 'Spock'
-        'kirk'    | 'Kirk'
+        'kirk'  | 'Kirk'
         'bones' | 'Bones'
    }
-}</pre>
+}
+```
+
 
 En el bloque de definición, se tienenn strings y un assert sin usar. La biblioteca de Spock “secuestra” el compilador y Spock mueve el código para hacerlo adecuado. Por cada renglón creará una iteración y la asignará a cada variable, mucho más sencillo.
 
-<pre>&gt; gradle clean test</pre>
+```bash
+$ gradle clean test
+```
 
 Exitosa
 
 Al abrirla se obtiene una lista unificada. Para tener la de todas, o de cada una, puede agregarse:
 
-FooSpeck.groovy
+`FooSpeck.groovy`
 
-<pre>package foo
-
-import spock.lang.*
-
-@Unroll
-class FooSpec extends Specification {
-   def voyAProbarAlgoConEsteMetodo() {
-      expect:
-         name.capitalize() == expected
-      where:
-         name  | expected
-        'spock' | 'Spock'
-        'kirk'    | 'Kirk'
-        'bones' | 'Bones'
-   }
-}</pre>
-
-Un problema de la computación es darle nombre a las cosas.
-
-def “Aplicar capitalize() a #name resulta en #expected”() en Spock es válido y lo utiliza.
-
-La JVM permite utilizar muchos más carácteres, por ejemplo, una clase cualquiera:
-
-def “”” y un multistring, sigue funcionando.
-
-Spock define en especificación para los reportes. Permite agregar texto de manera simlar a Cucumber, etc. y reportes amigables al cliente.
-
-Esta capacidad de expresión y pruebas dirigidas por datos son suficientes. ScalaCheck Engwise Testing. Si quisiéramos generar datos dinámicos:
-
-FooSpeck.groovy
-
-<pre>package foo
-
-import spock.lang.*
-
-@Unroll
-class FooSpec extends Specification {
-   def voyAProbarAlgoConEsteMetodo() {
-      expect:
-         name.capitalize() == expected
-      where:
-         name &lt;&lt; ['spock', 'kirk', 'bones']
-         name &lt;&lt; ['Spock', 'Kirk', 'Bones']
-
-   }
-}</pre>
-
-El powerAssert está desde Groovy 1.6 (en scala, Spocky es la alternativa).
-
-Cualquier cosa que extienda iterable se puede consumir en la prueba, incluso conectarse a la base de datos.
-
-<pre>FooSpeck.groovy
+```groovy
 package foo
 
 import spock.lang.*
@@ -508,33 +470,90 @@ class FooSpec extends Specification {
       expect:
          name.capitalize() == expected
       where:
-         name &lt;&lt; ['spock', 'kirk', 'bones']
-         name &lt;&lt; ['Spock', 'Kirk', 'Bones']
+         name   | expected
+        'spock' | 'Spock'
+        'kirk'  | 'Kirk'
+        'bones' | 'Bones'
+   }
+}
+```
+
+Un problema de la computación es darle nombre a las cosas.
+
+`def “Aplicar capitalize() a #name resulta en #expected”()` en _Spock_ es válido y lo utiliza.
+
+La _JVM_ permite utilizar muchos más carácteres, por ejemplo, una clase cualquiera:
+
+`def “””` y un _multistring_, sigue funcionando.
+
+_Spock_ define en especificación para los reportes. Permite agregar texto de manera similar a _Cucumber_, etc. y reportes amigables al cliente.
+
+Esta capacidad de expresión y pruebas dirigidas por datos son suficientes. _ScalaCheck Engwise Testing_. Si quisiéramos generar datos dinámicos:
+
+`FooSpeck.groovy`
+
+```groovy
+package foo
+
+import spock.lang.*
+
+@Unroll
+class FooSpec extends Specification {
+   def voyAProbarAlgoConEsteMetodo() {
+      expect:
+         name.capitalize() == expected
+      where:
+         name << ['spock', 'kirk', 'bones']
+         name << ['Spock', 'Kirk', 'Bones']
 
    }
-}</pre>
+}
+```
 
-Las reglas @Rule de Junit 1.4 permiten ejecutar cosas antes y después. Lo importante viene debajo.
+El _powerAssert_ está desde _Groovy_ 1.6 (en _scala_, _Spocky_ es la alternativa).
 
-Puede usarse PowerMock, Mockito u otros.
+Cualquier cosa que extienda iterable se puede consumir en la prueba, incluso conectarse a la base de datos.
 
-Describió detalles para cleanupSpec. Para cada adicional, MockSpeck.
+`FooSpeck.groovy`
 
-Mostró ejemplos de Asciidoctor con Mocks. Un mock es estricto en argumentos y orden. Puedo separar bloques mediante «and:» y lo revisará en el orden que se desee, al extremo de _ \*  \_.\_(\*_)
+```groovy
+package foo
 
-En Spock no se llaman Spocks, no interacciones.
+import spock.lang.*
 
-En Spock se pueden concatenar pruebas. Con @Stepwise se ejecutan los estados, basándose en el estado final de la prueba anterior. Funciona también con @Unroll.
+@Unroll
+class FooSpec extends Specification {
+   def voyAProbarAlgoConEsteMetodo() {
+      expect:
+         name.capitalize() == expected
+      where:
+         name << ['spock', 'kirk', 'bones']
+         name << ['Spock', 'Kirk', 'Bones']
 
-EasyBee escribe escenarios, con referencias a otros escenarios. Dependencias hacia arriba, no hacia abajo, puede ser una buena idea para una extensión.
+   }
+}
+```
+
+Las reglas _@Rule_ de _Junit_ 1.4 permiten ejecutar cosas antes y después. Lo importante viene debajo.
+
+Puede usarse _PowerMock_, _Mockito_ u otros.
+
+Describió detalles para `cleanupSpec`. Para cada adicional, _MockSpeck_.
+
+Mostró ejemplos de _Asciidoctor_ con _Mocks_. Un _mock_ es estricto en argumentos y orden. Puedo separar bloques mediante «and:» y lo revisará en el orden que se desee, al extremo de _ \*  \_.\_(\*_)
+
+En _Spock_ no se llaman _Spocks_, no interacciones.
+
+En _Spock_ se pueden concatenar pruebas. Con `@Stepwise` se ejecutan los estados, basándose en el estado final de la prueba anterior. Funciona también con `@Unroll`.
+
+_EasyBee_ escribe escenarios, con referencias a otros escenarios. Dependencias hacia arriba, no hacia abajo, puede ser una buena idea para una extensión.
 
 GmavenPlus y la jar de Spock es todo lo que se necesita para integrarlo a un objeto Java.
 
 Springboot – Ratpack – es otro proyecto a considerar.
 
 
-
-[Mensaje breve del fundador de grails.org.mx para pedir ayuda de la comunidad][4] from [Grails.org.mx][2] on [Vimeo][3].
+<iframe src="https://player.vimeo.com/video/92464572" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 Y así de repente se fueron las horas, se quedó con ganas de seguir, y precisamente es el sentimiento que estas breves líneas desean impregnar: es momento de hacer florecer nuestras comunidades. Es tiempo de recuperar y continuar nuestra dinámica&#8230; pero esa, es otra historia, historia que invitamos a colaborar juntos, hombro con hombro.
  
@@ -566,3 +585,4 @@ Y así de repente se fueron las horas, se quedó con ganas de seguir, y precisam
  [26]: http://search.maven.org/
  [27]: http://central.sonatype.org/
  [28]: http://junit.org/
+ [29]: http://mrhaki.blogspot.mx/
