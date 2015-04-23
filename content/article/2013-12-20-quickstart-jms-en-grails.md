@@ -84,18 +84,18 @@ Una característica de ActiveMQ es que con sólo agregar la JAR a nuestro CLASSP
 
 Adicionalmente, tenemos que configurar  un par de beans adicionales con ayuda de **resources.groovy**, para definir nuestro ConnectionFactory.
 
-[sourcecode language=&#8221;groovy&#8221;]  
-import org.apache.activemq.ActiveMQConnectionFactory  
-import org.springframework.jms.connection.SingleConnectionFactory
+```groovy
+  import org.apache.activemq.ActiveMQConnectionFactory
+  import org.springframework.jms.connection.SingleConnectionFactory
 
-beans = {  
-jmsConnectionFactory(SingleConnectionFactory) {  
-targetConnectionFactory = { ActiveMQConnectionFactory cf ->  
-brokerURL = &#8216;vm://localhost&#8217;  
-}  
-}  
-}  
-[/sourcecode]
+  beans = {
+    jmsConnectionFactory(SingleConnectionFactory) {
+      targetConnectionFactory = { ActiveMQConnectionFactory cf ->
+        brokerURL = ‘vm://localhost’
+      }
+    }
+  }
+```
 
 *Para demostrar la funcionalidad del envío de mensajes, supongamos que tenemos una clase de dominio y su scaffold, haremos uso de ello para sobreescribir algunos métodos y mandar el procesamiento hacia el broker de mensajería.*
 
