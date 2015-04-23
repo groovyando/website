@@ -65,22 +65,22 @@ plugins {
 
 Una característica de ActiveMQ es que con sólo agregar la JAR a nuestro CLASSPATH, podemos contar con un broker de mensajería listo para usarse, el cual esta embebido en la JVM que nos ayuda a levantar la aplicación. Por lo tanto podemos agregarlo a nuestra sección de dependencias. Adicionalmente con la versión de Grails y la versión del plugin en cuestión surgen algunos problemas al no poder resolver algunas clases de SpringJMS por lo que agregarla también es necesario.
 
-[sourcecode language=&#8221;groovy&#8221;]  
-dependencies {  
-compile(&#8216;org.apache.activemq:activemq-core:5.3.0&#8242;,  
-&#8216;org.apache.activemq:activeio-core:3.1.2&#8242;,  
-&#8216;org.apache.xbean:xbean-spring:3.7&#8242;) {  
-excludes &#8216;activemq-openwire-generator&#8217;  
-excludes &#8216;commons-logging&#8217;  
-excludes &#8216;xalan&#8217;  
-excludes &#8216;xml-apis&#8217;  
-excludes &#8216;spring-context&#8217;  
-exported = false  
-}  
-compile &#8216;org.springframework:spring-context:3.2.5.RELEASE&#8217;  
-compile &#8216;org.springframework:spring-jms:3.2.5.RELEASE&#8217;  
-}  
-[/sourcecode]
+```gradle
+  dependencies {
+    compile(‘org.apache.activemq:activemq-core:5.3.0′,
+            ‘org.apache.activemq:activeio-core:3.1.2′,
+            ‘org.apache.xbean:xbean-spring:3.7′) {
+              excludes ‘activemq-openwire-generator’
+              excludes ‘commons-logging’
+              excludes ‘xalan’
+              excludes ‘xml-apis’
+              excludes ‘spring-context’
+              exported = false
+            }
+    compile ‘org.springframework:spring-context:3.2.5.RELEASE’
+    compile ‘org.springframework:spring-jms:3.2.5.RELEASE’
+}
+```
 
 Adicionalmente, tenemos que configurar  un par de beans adicionales con ayuda de **resources.groovy**, para definir nuestro ConnectionFactory.
 
