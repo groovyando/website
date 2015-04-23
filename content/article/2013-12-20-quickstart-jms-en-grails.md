@@ -9,29 +9,29 @@ categories:
   - Groovy
   - Plugins
 ---
-El uso de JMS dentro de las aplicaciones Java es una de las piedras angulares dentro del desarrollo JEE; permite que las aplicaciones se comuniquen de forma fiable por medio de mensajes asíncronos enviados a través de un broker e mensajería. JMS es bueno para sistemas distribuidos o procesamiento de tareas, lo cual puede ayudar a la escalabilidad.
+El uso de _JMS_ dentro de las aplicaciones Java es una de las piedras angulares dentro del desarrollo _JEE_; permite que las aplicaciones se comuniquen de forma fiable por medio de mensajes asíncronos enviados a través de un broker e mensajería. _JMS_ es bueno para sistemas distribuidos o procesamiento de tareas, lo cual puede ayudar a la escalabilidad.
 
 ## Elementos esenciales para el uso de JMS
 
-Existen dos elementos esenciales en JMS, un productor de mensajes y un consumidor de mensajes. Así también, existen dos estilos principales para el envió de mensajes y para su consumo: Queues(Colas) y Topics(Tópicos).
+Existen dos elementos esenciales en _JMS_, un productor de mensajes y un consumidor de mensajes. Así también, existen dos estilos principales para el envió de mensajes y para su consumo: _Queues_ (Colas) y _Topics_ (Tópicos).
 
-Un Queue es un mecanismo punto-a-punto que usa el estilo de de almacén y reenvío para entregar un mensaje de un productor a un consumidor.
+Un _Queue_ es un mecanismo punto-a-punto que usa el estilo de de almacén y reenvío para entregar un mensaje de un productor a un consumidor.
 
-Un tópico es un mecanismo del tipo pub-sub donde una aplicación envía un mensaje  y todos los puntos que se han suscrito al tópico reciben el mensaje para procesarlo mientras estén activas.
+Un tópico es un mecanismo del tipo _pub-sub_ donde una aplicación envía un mensaje  y todos los puntos que se han suscrito al tópico reciben el mensaje para procesarlo mientras estén activas.
 
 ### Spring y el JMSTemplate
 
-&#8220;La clase JmsTemplate es central en el paquete básico de JMS. Simplifica el uso de JMS ya que se encarga de la creación y liberación de recursos al enviar o recibir mensajes de forma sincrónica.&#8221;
+"La clase _JmsTemplate_ es central en el paquete básico de _JMS_. Simplifica el uso de _JMS_ ya que se encarga de la creación y liberación de recursos al enviar o recibir mensajes de forma sincrónica."
 
-El [JmsTemplate][1] requiere una referencia a un ConnectionFactory, y este a su vez se referencia hacia el broker.
+El [_JmsTemplate_][1] requiere una referencia a un _ConnectionFactory_, y este a su vez se referencia hacia el _broker_.
 
-El envío de mensajes como lo resume Spring se puede ensamblar de la siguiente manera:
+El envío de mensajes como lo resume _Spring_ se puede ensamblar de la siguiente manera:
 
-ConnectionFactory->Connection->Session->MessageProducer->send
+`ConnectionFactory->Connection->Session->MessageProducer->send`
 
-La aplicación puede recibir mensajes si implementa un message listener. Y Spring a través del soporte de JMS permite implementarlo de forma muy sencilla con lo que denomina Message Driven POJO, por lo tanto no necesitamos codificar la interface [MessageListener][2].
+La aplicación puede recibir mensajes si implementa un _message listener_. Y _Spring_ a través del soporte de _JMS_ permite implementarlo de forma muy sencilla con lo que denomina _Message Driven POJO_, por lo tanto no necesitamos codificar la interface [MessageListener][2].
 
-Sin embargo, aunque podríamos implementarlo de forma conveniente, Spring nos provee del MessageListenerAdapter que es una forma de registrar un listener para recibir un mensaje sin ser invasivo con elementos de Spring.
+Sin embargo, aunque podríamos implementarlo de forma conveniente, _Spring_ nos provee del _MessageListenerAdapter_ que es una forma de registrar un _listener_ para recibir un mensaje sin ser invasivo con elementos de _Spring_.
 
 La referencia que se hace aquí considera un poco de profundidad en temas como:
 
@@ -55,7 +55,6 @@ Los elementos que describo durante la redacción de este artículo se ejecutaron
 Para comenzar con el uso del plugin tenemos que declararlo en la sección de plugins **BuildConfig.groovy**:
 
 ```gradle
-
 plugins {  
   //...
   compile ":jms:1.2"  
@@ -105,27 +104,26 @@ El plugin de JMS nos provee de un servicio que ayuda al envío de mensajes, tien
 
 Nuestro controller quedaría:
 
-[sourcecode language=&#8221;groovy&#8221;]  
+```groovy
 package com.makingdevs
 
 class ProjectController {
+  static scaffold = Project
+  def jmsService
 
-static scaffold = Project  
-def jmsService
+  def save() {
+    jmsService.send(queue: "project.new", params, "standard", null)
+    flash.message = "Project creation queued"
+    redirect(action: "index")
+  }
 
-def save() {  
-jmsService.send(queue:"project.new",params,"standard",null)  
-flash.message = "Project creation queued"  
-redirect(action:"index")  
+  def update() {
+    jmsService.send(topic: "project.update", params, "standard", null)
+    flash.message = "Project updating queued"
+    redirect(action: "index")
+  }
 }
-
-def update(){  
-jmsService.send(topic:"project.update",params,"standard",null)  
-flash.message = "Project updating queued"  
-redirect(action:"index")  
-}  
-}  
-[/sourcecode]
+```
 
 ### El consumidor de mensajes
 
