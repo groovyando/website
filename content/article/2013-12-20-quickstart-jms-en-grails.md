@@ -129,49 +129,49 @@ class ProjectController {
 
 Una vez implementado el controller, procedemos con la creación del consumidor, el cual delegamos a una clase de Servicio de Grails, el Service Listener, como se denomina ahora esta clase debe de tener un atributo estático que defina la exposición de JMS para el plugin y contar con un método &#8216;onMessage&#8217;, como la interfaz MessageListener.
 
-[sourcecode language=&#8221;groovy&#8221;]  
+```groovy
 class ProjectService {
 
-static exposes = ["jms"]
+  static exposes = ['jms']
 
-def onMessage(msg) {  
-// handle message  
-}  
-}  
-[/sourcecode]
+  def onMessage(msg) {
+    // handle message
+  }
+}
+```
 
 Sin embargo, el plugin provee de anotaciones para indicarle a un método que se expone como un listener de JMS que sea quien reciba el mensaje y actúe. Dicho método puede ser un Queue o un Topic, las anotaciones @Queue y @Subscriber nos ayudan a definir y direccionar el envío de mensajes, nuestro servicio quedaría:
 
-[sourcecode language=&#8221;groovy&#8221;]  
+```groovy
 package com.makingdevs
 
 import grails.plugin.jms.*
 
 class ProjectService {
 
-static exposes = ["jms"]
+  static exposes = [“jms”]
 
-@Queue(name="project.new")  
-def createInQueue(msg) {  
-println msg  
-def p = new Project(msg)  
-p.save()  
-null  
+  @Queue(name=“project.new”)
+  def createInQueue(msg) {
+    println msg
+    def p = new Project(msg)
+    p.save()
+    null
+  }
+
+  @Subscriber(topic = “project.update”)
+  def updateInQueue(msg){
+    println “updateInQueue : ${msg}”
+    null
+  }
+
+  @Subscriber(topic = “project.update”)
+  def updateBackupInQueue(msg){
+    println “updateBackupInQueue : ${msg}”
+    null
+  }
 }
-
-@Subscriber(topic = "project.update")  
-def updateInQueue(msg){  
-println "updateInQueue : ${msg}"  
-null  
-}
-
-@Subscriber(topic = "project.update")  
-def updateBackupInQueue(msg){  
-println "updateBackupInQueue : ${msg}"  
-null  
-}  
-}  
-[/sourcecode]
+```
 
 Al correr nuestra aplicación y navegar el scaffold, podremos ver claramente en la consola los deplegados respectivos en pantalla, notando que la llamada al Queue se ve reflejada al persistir una entidad, y la llamada a dos métodos servicio que son el Topic se ejecutan de forma simultánea al ejecutar un update. Para más información de como consumir un mensaje te recomiendo [eches un vistazo a la documentación del plugin.][5]
 
