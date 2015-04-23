@@ -54,13 +54,14 @@ Los elementos que describo durante la redacción de este artículo se ejecutaron
 
 Para comenzar con el uso del plugin tenemos que declararlo en la sección de plugins **BuildConfig.groovy**:
 
-[sourcecode language=&#8221;groovy&#8221;]  
+```gradle
+
 plugins {  
-//&#8230;  
-compile ":jms:1.2"  
-//&#8230;  
+  //...
+  compile ":jms:1.2"  
+  //...
 }  
-[/sourcecode]
+```
 
 Una característica de ActiveMQ es que con sólo agregar la JAR a nuestro CLASSPATH, podemos contar con un broker de mensajería listo para usarse, el cual esta embebido en la JVM que nos ayuda a levantar la aplicación. Por lo tanto podemos agregarlo a nuestra sección de dependencias. Adicionalmente con la versión de Grails y la versión del plugin en cuestión surgen algunos problemas al no poder resolver algunas clases de SpringJMS por lo que agregarla también es necesario.
 
