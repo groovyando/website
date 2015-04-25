@@ -2,7 +2,8 @@
     <h1>{{ .Title }}</h1>
     <h3>{{ index .Site.Params "SubTitle" }}</h3>
     <hr>
-    {{ range first 10 .Data.Pages }}
+    {{ $paginator := .Paginate (where .Data.Pages "Type" "article") }}
+    {{ range $paginator.Pages }}
       <h2>
         {{ if isset .Params "icon" }}
         <span class="fa {{ .Params.icon }}"></span>
@@ -11,7 +12,8 @@
         {{ end }}
         <a href="{{.Permalink}}">{{.Title}}</a>
       </h2>
-      <p class="date"><span class="glyphicon glyphicon-time"></span> {{.Date.Format "Mon 2 Jan, 2006"}}</p>
+      <p class="date">
+        <span class="glyphicon glyphicon-time"></span> {{.Date.Format "Mon 2 Jan, 2006"}}</p>
       <p class="date">
             <i class="fa fa-clock-o"></i>
             Reading time ~{{ .ReadingTime }} minutes
@@ -26,6 +28,7 @@
       <a class="btn btn-primary" href="{{.Permalink}}">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
       <hr>
     {{ end }}
+    {{ template "_internal/pagination.html" . }}
 <!--
     {{ template "_internal/pagination.html" . }}
 {{ range .Paginator.Pages }}
