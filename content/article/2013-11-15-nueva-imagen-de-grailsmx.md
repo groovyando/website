@@ -9,10 +9,8 @@ categories:
 ---
 Hola a todos, esta vez les anuncio que hay una nueva imagen de GrailsMX fue renovado para ustedes con la finalidad de brindarles una nueva y renovada imagen.
 
-[layerslider id=&#8221;9&#8243;]  
 
-
-&#8220;Nueva imagen, nueva estructura&#8221; para mayor fluidez y organización del sitio como el menú en el cual esta perfectamente estructurado nuestros blogs sobre los diferentes temas que tratamos además de un apartado exclusivo del Podcats de GrailsMX en cual podrán escucharnos o subscribirse al feed.
+"Nueva imagen, nueva estructura" para mayor fluidez y organización del sitio como el menú en el cual esta perfectamente estructurado nuestros blogs sobre los diferentes temas que tratamos además de un apartado exclusivo del Podcats de GrailsMX en cual podrán escucharnos o subscribirse al feed.
 
 Gracias al nuevo apartado en la pagina principal y en el nuevo diseño los blogs es mucho mas claro y flexible al leer. Ademas de que lo podrás consultar desde cualquier parte en al que te encuentres gracias a que el sitio se puede visualizar en cualquier dispositivo móvil.
 

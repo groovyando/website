@@ -16,62 +16,23 @@ Hablamos de como a crecido exponencialmente la &#8220;nube&#8221; hablando en el
 
 Algunos Links sobre lo tratado:
 
+- Infrastructure as a service
+- Amazon EC2
+- Elastic Beanstalk / S3 /
+- Aasgard / Ice de Netflix
+  - <a href="https://github.com/Netflix/asgard" target="_blank">https://github.com/Netflix/asgard</a>
+  - <a href="https://github.com/Netflix/Cloud-Prize/wiki" target="_blank">https://github.com/Netflix/Cloud-Prize/wiki</a>
+  - <a href="http://www.informationweek.com/government/cloud-saas/6-ways-amazon-cloud-helped-obama-win/240142268" target="_blank">http://www.informationweek.com/government/cloud-saas/6-ways-amazon-cloud-helped-obama-win/240142268</a>
+  - <a href="https://github.com/Netflix/ice" target="_blank">https://github.com/Netflix/ice</a>
+- Digital Ocean
+- Platform as a Service
+- Cloud Foundry
+- Openshift
+
+
 <div>
-     &#8211; Infrastructure as a service</p> 
-  
-  <div>
-       &#8211; Amazon EC2
-  </div>
-  
-  <div>
-       &#8211; Elastic Beanstalk / S3 /
-  </div>
-  
-  <div>
-  </div>
-  
-  <div>
-       &#8211; Aasgard / Ice de Netflix
-  </div>
-  
-  <div>
-         <a href="https://github.com/Netflix/asgard" target="_blank">https://github.com/Netflix/<wbr />asgard</a>
-  </div>
-  
-  <div>
-         <a href="https://github.com/Netflix/Cloud-Prize/wiki" target="_blank">https://github.com/Netflix/<wbr />Cloud-Prize/wiki</a>
-  </div>
-  
-  <div>
-         <a href="http://www.informationweek.com/government/cloud-saas/6-ways-amazon-cloud-helped-obama-win/240142268" target="_blank">http://www.informationweek.<wbr />com/government/cloud-saas/6-<wbr />ways-amazon-cloud-helped-<wbr />obama-win/240142268</a>
-  </div>
-  
-  <div>
-        <a href="https://github.com/Netflix/ice" target="_blank">https://github.com/Netflix/<wbr />ice</a>
-  </div>
-  
-  <div>
-  </div>
-  
-  <div>
-       &#8211; Digital Ocean
-  </div>
-  
-  <div>
-  </div>
-  
-  <div>
-    - Platform as a Service
-  </div>
-  
-  <div>
-       &#8211; Cloud Foundry
-  </div>
-  
-  <div>
-       &#8211; Openshift
-  </div>
-  
+ 
+ 
   <div>
        &#8211; Google App Engine
   </div>
