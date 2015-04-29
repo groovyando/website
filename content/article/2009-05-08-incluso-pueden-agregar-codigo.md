@@ -1,5 +1,5 @@
 ---
-title: Incluso pueden agregar código…
+title: Incluso pueden agregar código
 author: neodevelop
 layout: post
 date: 2009-05-08
