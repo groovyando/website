@@ -4,6 +4,7 @@ description = "Groovy y Grails en tu idioma"
 baseurl = "http://grails.org.mx"
 languageCode = "es-MX"
 title = "Groovy y Grails en tu idioma"
+theme = "default"
 
 pygmentsuseclasses = true
 disqusShortname = "groovyando"
