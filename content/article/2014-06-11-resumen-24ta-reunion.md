@@ -1,5 +1,5 @@
 ---
-title: Resumen 24ta. Reunión de Grails.org.mx y SpringHispano.org
+title: Resumen 24ta. Reunión de Grails.org.mx y SpringHispano.org.
 author: MIguel-1.mx
 layout: post
 date: 2014-06-11
