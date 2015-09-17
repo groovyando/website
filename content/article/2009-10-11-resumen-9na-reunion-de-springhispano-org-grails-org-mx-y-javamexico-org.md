@@ -1,7 +1,6 @@
 ---
 title: Resumen 9na. Reunión de SpringHispano.org, Grails.org.mx y JavaMexico.org
 author: MIguel-1.mx
-layout: post
 date: 2009-10-11
 url: /2009/10/11/resumen-9na-reunion-de-springhispano-org-grails-org-mx-y-javamexico-org/
 categories:

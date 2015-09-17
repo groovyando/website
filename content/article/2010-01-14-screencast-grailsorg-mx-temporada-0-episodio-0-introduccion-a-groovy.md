@@ -1,7 +1,6 @@
 ---
 title: 'Screencast grails.org.mx Temporada 0 Episodio 0: Introduccion a Groovy'
 author: domix
-layout: post
 date: 2010-01-19
 url: /2010/01/14/screencast-grailsorg-mx-temporada-0-episodio-0-introduccion-a-groovy/
 categories:

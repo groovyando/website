@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 8 de la Temporada 1: Herramientas de construcción'
 author: domix
-layout: post
 date: 2010-06-24
 url: /2010/06/24/podcast-grailsorg-mx-episodio-8-de-la-temporada-1-herramientas-de-construccion/
 enclosure:

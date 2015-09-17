@@ -1,7 +1,6 @@
 ---
 title: Te llevamos a Campus Party México 2010 totalmente gratis
 author: domix
-layout: post
 date: 2010-06-21
 url: /2010/06/15/te-llevamos-a-campus-party-mexico-2010-totalmente-gratis/
 categories:

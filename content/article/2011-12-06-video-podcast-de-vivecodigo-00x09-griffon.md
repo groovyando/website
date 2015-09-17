@@ -1,7 +1,6 @@
 ---
 title: Video podcast de ViveCodigo 00×09 – Griffon
 author: neodevelop
-layout: post
 date: 2011-12-06
 url: /2011/12/06/video-podcast-de-vivecodigo-00x09-griffon/
 enclosure:

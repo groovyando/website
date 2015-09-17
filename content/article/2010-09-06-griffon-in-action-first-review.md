@@ -1,7 +1,6 @@
 ---
 title: Griffon in action – first review
 author: neodevelop
-layout: post
 date: 2010-09-06
 url: /2010/09/06/griffon-in-action-first-review/
 categories:

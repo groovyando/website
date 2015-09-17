@@ -1,7 +1,6 @@
 ---
 title: Usar Gradle Wrapper para evitar instalar Gradle
 author: domix
-layout: post
 date: 2011-08-21
 url: /2011/08/21/usar-gradle-wrapper-para-evitar-instalar-gradle/
 categories:

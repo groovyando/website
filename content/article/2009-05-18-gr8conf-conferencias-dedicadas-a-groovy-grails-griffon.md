@@ -1,7 +1,6 @@
 ---
 title: 'GR8Conf: Conferencias dedicadas a Groovy, Grails & Griffon'
 author: neodevelop
-layout: post
 date: 2009-05-18
 url: /2009/05/18/gr8conf-conferencias-dedicadas-a-groovy-grails-griffon/
 categories:

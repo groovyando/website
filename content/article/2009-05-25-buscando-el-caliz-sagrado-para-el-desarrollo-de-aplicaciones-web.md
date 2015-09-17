@@ -1,7 +1,6 @@
 ---
 title: ¿Buscando el caliz sagrado para el desarrollo de aplicaciones Web?
 author: MIguel-1.mx
-layout: post
 date: 2009-06-19
 url: /2009/05/25/buscando-el-caliz-sagrado-para-el-desarrollo-de-aplicaciones-web/
 categories:

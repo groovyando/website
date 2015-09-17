@@ -1,7 +1,6 @@
 ---
 title: Paralelizacion con GPars
 author: neodevelop
-layout: post
 date: 2012-03-31
 url: /2012/03/31/paralelizacion-con-gpars/
 categories:

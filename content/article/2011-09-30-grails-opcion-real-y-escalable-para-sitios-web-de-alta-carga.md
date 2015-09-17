@@ -1,7 +1,6 @@
 ---
 title: Grails, opción real y escalable para sitios web de alta carga.
 author: domix
-layout: post
 date: 2011-09-30
 url: /2011/09/30/grails-opcion-real-y-escalable-para-sitios-web-de-alta-carga/
 categories:

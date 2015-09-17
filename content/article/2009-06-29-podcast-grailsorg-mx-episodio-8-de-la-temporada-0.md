@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 8 de la Temporada 0'
 author: domix
-layout: post
 date: 2009-06-29
 url: /2009/06/29/podcast-grailsorg-mx-episodio-8-de-la-temporada-0/
 enclosure:

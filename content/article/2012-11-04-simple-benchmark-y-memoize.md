@@ -1,7 +1,6 @@
 ---
 title: Simple benchmark y memoize
 author: neodevelop
-layout: post
 date: 2012-11-04
 url: /2012/11/04/simple-benchmark-y-memoize/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Dudas de Grails
 author: neodevelop
-layout: post
 date: 2013-03-14
 url: /2013/03/14/dudas-de-grails/
 categories:

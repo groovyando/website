@@ -1,7 +1,6 @@
 ---
 title: Grails y el SessionFactory
 author: neodevelop
-layout: post
 date: 2012-11-08
 url: /2012/11/08/grails-y-el-sessionfactory/
 categories:

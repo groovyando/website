@@ -1,7 +1,6 @@
 ---
 title: El podcast/screencast ViveCodigo lanza su primer episodio
 author: neodevelop
-layout: post
 date: 2011-04-24
 url: /2011/04/24/el-podcastscreencast-vivecodigo-lanza-su-primer-episodio/
 categories:

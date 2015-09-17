@@ -1,7 +1,6 @@
 ---
 title: 'HackerGarten México 2 – #hgmx2'
 author: neodevelop
-layout: post
 date: 2011-03-02
 url: /2011/03/02/hackergarten-mexico-2-hgmx2/
 categories:

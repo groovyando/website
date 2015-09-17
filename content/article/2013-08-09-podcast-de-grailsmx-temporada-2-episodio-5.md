@@ -1,7 +1,6 @@
 ---
 title: Podcast de GrailsMx, temporada 2 episodio 5
 author: cggg88
-layout: post
 date: 2013-08-09
 url: /2013/08/09/podcast-de-grailsmx-temporada-2-episodio-5/
 categories:

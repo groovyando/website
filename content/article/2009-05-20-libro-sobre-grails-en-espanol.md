@@ -1,7 +1,6 @@
 ---
 title: Libro sobre Grails en espanol
 author: domix
-layout: post
 date: 2009-06-30
 url: /2009/05/20/libro-sobre-grails-en-espanol/
 categories:

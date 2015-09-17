@@ -1,7 +1,6 @@
 ---
 title: Apptualizate 2012
 author: nRike
-layout: post
 date: 2012-02-29
 url: /2012/02/29/apptualizate-2012-desarrolla-una-aplicacion-movil-para-un-cliente-y-gana-su-negocio-en-48-horas/
 categories:

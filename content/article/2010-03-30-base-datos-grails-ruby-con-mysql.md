@@ -1,7 +1,6 @@
 ---
 title: Base datos Grails-Ruby con MySQL
 author: elias.bautista
-layout: post
 date: 2010-03-30
 url: /2010/03/30/base-datos-grails-ruby-con-mysql/
 categories:

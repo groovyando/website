@@ -1,7 +1,6 @@
 ---
 title: Podcast de GrailsMX, Temporada 2 episodio 1
 author: neodevelop
-layout: post
 date: 2013-02-12
 url: /2013/02/12/podcast-de-grailsmx-temporada-2-episodio-1/
 enclosure:

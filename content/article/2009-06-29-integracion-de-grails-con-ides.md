@@ -1,7 +1,6 @@
 ---
 title: Integración de Grails con IDEs
 author: MIguel-1.mx
-layout: post
 date: 2009-07-01
 url: /2009/06/29/integracion-de-grails-con-ides/
 categories:
@@ -47,19 +46,35 @@ categories:
   2. Cree la clase de dominio, dando clic derecho al nodo &#8216;Domain classes&#8217;. Nombre la clase de dominio &#8216;Book&#8217; (Book.groovy) y llene dos stings, &#8216;title&#8217; y &#8216;author&#8217;.
 </p>
 
-<pre class='brush:groovy'>class Book { 	String title 	String author } </pre>
+<pre class='brush:groovy'>class Book {
+ 	String title
+ 	String author
+ }
+ </pre>
 
 <p align='justify'>
   y cree valores iniciales en la clase Bootstrap.groovy:
 </p>
 
-<pre class='brush:groovy'>class BootStrap { 	def init = { servletContext -&gt; 		//Aquí se crea la información de prueba 		new Book(author:'Domingo Suárez',title:'SpringHispano in Action').save() 		new Book(author:'José Juan Reyes',title:'Grails.org.mx in Action').save() 		} 		def destroy = { 		} 	} </pre>
+<pre class='brush:groovy'>class BootStrap {
+ 	def init = { servletContext -&gt;
+ 		//Aquí se crea la información de prueba
+ 		new Book(author:'Domingo Suárez',title:'SpringHispano in Action').save()
+ 		new Book(author:'José Juan Reyes',title:'Grails.org.mx in Action').save()
+ 		}
+ 		def destroy = {
+ 		}
+ 	}
+ </pre>
 
 <p align='justify'>
   3. Cree el controller. D&eacute; clic derecho al nodo Controllers. Escriba &#8216;Book&#8217; y vea que se generar&aacute; la clase &#8216;BookControler&#8217;. Comente con diagonales la l&iacute;nea autogenerada y agregue &#8216;def scaffold = Book&#8217;, para que luzca aqu&eacute;l BookController.groovy algo as&iacute;:
 </p>
 
-<pre class='brush:groovy'>class BookController { 	//def index = { } 	def scaffold = Book </pre>
+<pre class='brush:groovy'>class BookController {
+ 	//def index = { }
+ 	def scaffold = Book
+ </pre>
 
 <p align='justify'>
   4. Por &uacute;ltimo, d&eacute; clic derecho a la aplicaci&oacute;n y seleccione &#8216;Run&#8217;. La aplicaci&oacute;n se despliega a jetty, como se puede apreciar en la ventana Services. De all&iacute;, hasta el infinito.

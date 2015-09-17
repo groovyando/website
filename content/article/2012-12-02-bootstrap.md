@@ -1,7 +1,6 @@
 ---
 title: Bootstrap
 author: sohjiro
-layout: post
 date: 2012-12-02
 url: /2012/12/02/bootstrap/
 categories:

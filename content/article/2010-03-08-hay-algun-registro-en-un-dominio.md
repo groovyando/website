@@ -1,7 +1,6 @@
 ---
 title: ¿Hay algun registro en un dominio?
 author: itubal
-layout: post
 date: 2010-03-08
 url: /2010/03/08/hay-algun-registro-en-un-dominio/
 categories:

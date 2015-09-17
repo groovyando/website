@@ -1,7 +1,5 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 4 de la Temporada 1'
-author: domix
-layout: post
 date: 2010-02-17
 url: /2010/02/17/podcast-grailsorg-mx-episodio-4-de-la-temporada-1/
 enclosure:

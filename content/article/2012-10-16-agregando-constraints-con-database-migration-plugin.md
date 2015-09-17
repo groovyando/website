@@ -1,7 +1,6 @@
 ---
 title: Agregando Constraints con Database Migration Plugin
 author: sohjiro
-layout: post
 date: 2012-10-16
 url: /2012/10/16/agregando-constraints-con-database-migration-plugin/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Resumen del SpringIO 2012
 author: neodevelop
-layout: post
 date: 2012-03-08
 url: /2012/03/08/resumen-del-springio-2012/
 categories:

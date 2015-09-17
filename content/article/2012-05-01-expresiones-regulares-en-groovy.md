@@ -1,7 +1,6 @@
 ---
 title: Expresiones regulares en Groovy
 author: neodevelop
-layout: post
 date: 2012-05-01
 url: /2012/05/01/expresiones-regulares-en-groovy/
 categories:

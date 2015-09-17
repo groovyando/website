@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx Temporada 1 Episodio 10: Entrevista a Tomas Lin (@tomaslin)'
 author: domix
-layout: post
 date: 2010-08-03
 url: /2010/08/03/podcast-grailsorg-mx-temporada-1-episodio-10-entrevista-a-tomas-lin-tomaslin/
 enclosure:

@@ -1,7 +1,6 @@
 ---
 title: 'Quickstart: JMS en Grails'
 author: neodevelop
-layout: post
 date: 2013-12-20
 url: /2013/12/20/quickstart-jms-en-grails/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Actualizacion de Plugins
 author: dracof
-layout: post
 date: 2009-09-02
 url: /2009/09/02/actualizacion-de-plugins/
 categories:

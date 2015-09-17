@@ -1,7 +1,6 @@
 ---
 title: Warping Test to Spockframework
 author: neodevelop
-layout: post
 date: 2012-10-08
 url: /2012/10/08/warping-test-to-spockframework/
 categories:

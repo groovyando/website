@@ -1,7 +1,6 @@
 ---
 title: ¡como usar grails?
 author: juantonio
-layout: post
 date: 2013-06-19
 draft: true
 url: /2013/06/19/como-usar-grails/

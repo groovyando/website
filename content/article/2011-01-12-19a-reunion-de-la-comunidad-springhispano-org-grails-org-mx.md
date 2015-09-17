@@ -1,7 +1,6 @@
 ---
 title: 19a. Reunión de la Comunidad Springhispano.org, grails.org.mx
 author: MIguel-1.mx
-layout: post
 date: 2011-01-12
 url: /2011/01/12/19a-reunion-de-la-comunidad-springhispano-org-grails-org-mx/
 categories:

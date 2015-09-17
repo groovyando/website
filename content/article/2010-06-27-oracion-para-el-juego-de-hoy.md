@@ -1,7 +1,6 @@
 ---
 title: Oración para el juego de hoy
 author: MIguel-1.mx
-layout: post
 date: 2010-06-27
 url: /2010/06/27/oracion-para-el-juego-de-hoy/
 categories:

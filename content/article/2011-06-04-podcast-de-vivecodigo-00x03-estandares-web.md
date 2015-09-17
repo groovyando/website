@@ -1,7 +1,6 @@
 ---
 title: Podcast de ViveCodigo 00×03 – Estándares Web
 author: neodevelop
-layout: post
 date: 2011-06-04
 url: /2011/06/04/podcast-de-vivecodigo-00x03-estandares-web/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Colecciones en Groovy!
 author: neodevelop
-layout: post
 date: 2012-03-26
 url: /2012/03/26/colecciones-en-groovy/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Podcast de GrailsMx, temporada 2 episodio 7
 author: cggg88
-layout: post
 date: 2013-10-02
 url: /2013/10/02/podcast-de-grailsmx-temporada-2-episodio-7/
 et_feather_settings:

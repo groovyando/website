@@ -1,7 +1,6 @@
 ---
 title: 'HackerGarten México 3 – #hgmx3'
 author: neodevelop
-layout: post
 date: 2011-05-20
 url: /2011/05/12/hackergarten-mexico-3-hgmx3/
 categories:

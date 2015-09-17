@@ -1,7 +1,6 @@
 ---
 title: Diferencias entre Groovy y Java
 author: MIguel-1.mx
-layout: post
 date: 2009-06-19
 url: /2009/06/05/diferencias-entre-groovy-y-java/
 categories:
@@ -25,7 +24,11 @@ categories:
   Como ejemplo, si al trabajar con Java se quisiera mantener la sem&aacute;ntica de igualdad para objetos, por ejemplo, haciendo tipado din&aacute;mico de la siguiente manera:
 </p>
 
-<pre class='brush:java'>def x = 2 x 2 if (x == 4) { ... } </pre>
+<pre class='brush:java'>def x = 2 x 2
+ if (x == 4) {
+ ...
+ }
+ </pre>
 
 <p align='justify'>
   Se obtendr&iacute;an resultados inesperados, pues aunque se quisiera resolver una igualdad basada en el valor, Java lo resolver&iacute;a por identidad. Es cierto, rara vez se usan comparaciones de identidad.
@@ -35,7 +38,10 @@ categories:
   Si en Groovy se quisiera comparar identidades de los objetos, el m&eacute;todo is() se proporciona para cada objeto:
 </p>
 
-<pre class='brush:java'>if (x.is(4)) { ... // nunca true } </pre>
+<pre class='brush:java'>if (x.is(4)) {
+ ... // nunca true
+ }
+ </pre>
 
 <p align='justify'>
   La condici&oacute;n de arriba nunca es true, ya que el objeto Integer en x (el cual es el resultado del c&oacute;mputo de arriba), no es id&eacute;ntico al objeto Integer con el valor 4 que se ha creado para la comparaci&oacute;n.
@@ -45,23 +51,27 @@ categories:
   <strong>2.</strong> Para declarar un arreglo no se puede escribir
 </p>
 
-<pre class='brush:groovy'>int[] a = {1,2,3}; </pre>
+<pre class='brush:groovy'>int[] a = {1,2,3};
+ </pre>
 
 <p align='justify'>
   sino
 </p>
 
-<pre class='brush:groovy'>int[] a = [1,2,3] </pre>
+<pre class='brush:groovy'>int[] a = [1,2,3]
+ </pre>
 
 <p align='justify'>
   <strong>3.</strong> Si en Java sol&iacute;a escribir un loop similar a este:
 </p>
 
-<pre class='brush:java'>for (int i=0; i &lt; len; i++) {...} </pre>
+<pre class='brush:java'>for (int i=0; i &lt; len; i++) {...}
+ </pre>
 
 en Groovy tambi&eacute;n puede usarlo, pero s&oacute;lo se podr&aacute; usar una variable contadora. Alternativas a esto pueden ser:
 
-<pre class='brush:groovy'>for (i in 0..len-1) {...} </pre>
+<pre class='brush:groovy'>for (i in 0..len-1) {...}
+ </pre>
 
 ,
 
@@ -69,7 +79,8 @@ en Groovy tambi&eacute;n puede usarlo, pero s&oacute;lo se podr&aacute; usar una
 
 o
 
-<pre class='brush:groovy'>len.times {...} </pre>
+<pre class='brush:groovy'>len.times {...}
+ </pre>
 
 <p align='justify'>
   <strong>4.</strong> in es una palabra reservada. No la use como nombre de variable.
@@ -99,13 +110,21 @@ o
   Los programadores de Java est&aacute;n acostumbrados a usar punto y coma para terminar sentencias y a no tener clausuras (closures). Tambi&eacute;n hay inicializadores de instancia en definiciones de clase. As&iacute; que podr&iacute;a ver algo como esto:
 </p>
 
-<pre class='brush:java'>class Prueba {   private final Algo algo = new Algo ( ) ;   { algo.hazAlgunaCosa ( ) ; } } </pre>
+<pre class='brush:java'>class Prueba {
+   private final Algo algo = new Algo ( ) ;
+   { algo.hazAlgunaCosa ( ) ; }
+ }
+ </pre>
 
 <p align='justify'>
   Muchos programadores de Groovy evitan el uso del punto y coma pues es distractor y redundante (aunque otros lo utilizan todo el tiempo &#8211; es cuesti&oacute;n de estilo de c&oacute;digo). Una situaci&oacute;n que puede acarrear dificultades es escribir lo de arriba en Groovy as&iacute;:
 </p>
 
-<pre class='brush:groovy'>class Prueba {   private final Algo algo = new Algo ( )   { algo.hazAlgunaCosa ( ) } } </pre>
+<pre class='brush:groovy'>class Prueba {
+   private final Algo algo = new Algo ( )
+   { algo.hazAlgunaCosa ( ) }
+ }
+ </pre>
 
 <p align='justify'>
   &iexcl;Esto lanzar&aacute; un MissingMethodException!
@@ -115,7 +134,11 @@ o
   El problema aqu&iacute; es que en este ejemplo la nueva l&iacute;nea no es un terminador de sentencia, as&iacute; que el siguiente bloque se trata como una clausura, la cual se pasa como un argumento al constructor Algo. Extra&ntilde;&iacute;simo para muchos, pero cierto. Si desea usar inicializadores de instancia de esta manera, es preciso tener un punto y coma:
 </p>
 
-<pre class='brush:groovy'>class Prueba {   private final Algo algo = new Algo ( ) ;   { algo.hazAlgunaCosa ( ) } } </pre>
+<pre class='brush:groovy'>class Prueba {
+   private final Algo algo = new Algo ( ) ;
+   { algo.hazAlgunaCosa ( ) }
+ }
+ </pre>
 
 <p align='justify'>
   De esta manera el siguiente bloque a la definici&oacute;n inicializada es claramente un inicializador de instancia.

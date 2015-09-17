@@ -1,7 +1,6 @@
 ---
 title: Bienvenido a grails.org.mx en Codice
 author: neodevelop
-layout: post
 date: 2009-06-22
 url: /2009/05/08/bienvenido-a-grailsorg-mx-en-codice/
 categories:

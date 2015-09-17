@@ -1,7 +1,6 @@
 ---
 title: Random Hacks of Kindness Ciudad de México.
 author: neodevelop
-layout: post
 date: 2010-11-23
 url: /2010/11/23/random-hacks-of-kindness-ciudad-de-mexico/
 categories:

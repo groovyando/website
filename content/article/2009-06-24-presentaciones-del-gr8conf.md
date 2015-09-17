@@ -1,7 +1,6 @@
 ---
 title: Presentaciones del GR8Conf
 author: neodevelop
-layout: post
 date: 2009-06-24
 url: /2009/06/24/presentaciones-del-gr8conf/
 categories:

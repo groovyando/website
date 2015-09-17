@@ -1,7 +1,6 @@
 ---
 title: Videos del Spring I/O 2012
 author: neodevelop
-layout: post
 date: 2012-06-08
 url: /2012/06/08/videos-del-spring-io-2012/
 categories:

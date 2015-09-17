@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 6 de la Temporada 1: Desarrollo web con Groovy'
 author: domix
-layout: post
 date: 2010-03-17
 url: /2010/03/17/podcast-grailsorg-mx-episodio-6-de-la-temporada-1-desarrollo-web-con-groovy/
 enclosure:

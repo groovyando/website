@@ -1,7 +1,6 @@
 ---
 title: 13a. Reunion de la Comunidad Springhispano.org, grails.org.mx
 author: neodevelop
-layout: post
 date: 2010-02-10
 url: /2010/02/10/13a-reunion-de-la-comunidad-springhispano-org-grails-org-mx/
 categories:

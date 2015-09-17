@@ -1,7 +1,6 @@
 ---
 title: Primer Hackergarten en la Cuidad de México
 author: MIguel-1.mx
-layout: post
 date: 2011-01-12
 url: /2011/01/12/primer-hackergarten-en-la-cuidad-de-mexico/
 categories:

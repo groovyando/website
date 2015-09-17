@@ -1,7 +1,6 @@
 ---
 title: Ganadores de las entradas a Campus Party México 2011
 author: neodevelop
-layout: post
 date: 2011-05-24
 url: /2011/05/24/ganadores-de-las-entradas-a-campus-party-mexico-2011/
 categories:

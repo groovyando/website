@@ -1,7 +1,6 @@
 ---
 title: Video podcast de ViveCodigo 00×08 – Android
 author: neodevelop
-layout: post
 date: 2011-08-17
 url: /2011/08/17/video-podcast-de-vivecodigo-00x08-android/
 enclosure:

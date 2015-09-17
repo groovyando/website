@@ -1,7 +1,6 @@
 ---
 title: Testing con GroovyTestCase
 author: neodevelop
-layout: post
 date: 2012-06-25
 url: /2012/06/25/testing-con-groovytestcase/
 categories:

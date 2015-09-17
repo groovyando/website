@@ -1,7 +1,6 @@
 ---
 title: 'Próximos cursos: EJB3, Spring, Hibernate y Groovy&Grails'
 author: neodevelop
-layout: post
 date: 2009-08-21
 url: /2009/08/19/proximos-cursos-ejb3-spring-hibernate-y-groovygrails/
 categories:

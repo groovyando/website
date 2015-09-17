@@ -1,7 +1,6 @@
 ---
 title: JMS configuración rápida en Grails
 author: sohjiro
-layout: post
 date: 2012-10-03
 url: /2012/10/03/jms-configuracion-rapida-en-grails/
 categories:

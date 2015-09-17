@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 0 de la Temporada 1'
 author: neodevelop
-layout: post
 date: 2009-09-21
 url: /2009/09/21/podcast-grailsorg-mx-episodio-0-de-la-temporada-1/
 enclosure:
@@ -21,7 +20,14 @@ Este episodio es el podcast de amniversario, cumplimos un a&ntilde;o hablando so
 
 En este episodio hablamos sobre metaprogramaci&oacute;n, el elemento clavey fundamental para hacer de Groovy un lenguaje dinamico para poder crear DSLs (Domain Specific Languages). Les dejamos un ejmplo de como hacer metaprogramaci&oacute;n muy sencillo:
 
-<pre class='brush:groovy'>def s = 'hola mundo' s.metaClass.metodoInexistente = {-&gt;     println 'hola' } println s.class.name s.metodoInexistente()  </pre>
+<pre class='brush:groovy'>def s = 'hola mundo'
+ s.metaClass.metodoInexistente = {-&gt;
+     println 'hola'
+ }
+ println s.class.name
+ s.metodoInexistente()
+ 
+ </pre>
 
 Los temas a detalle son:
 

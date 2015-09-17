@@ -1,7 +1,6 @@
 ---
 title: 'grails.org.mx en #cpartymx'
 author: neodevelop
-layout: post
 date: 2009-11-18
 url: /2009/11/16/grailsorg-mx-en-cpartymx/
 categories:

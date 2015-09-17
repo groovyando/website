@@ -1,7 +1,6 @@
 ---
 title: Episodio 00×01 del Videocast de ViveCodigo.org
 author: neodevelop
-layout: post
 date: 2011-05-06
 url: /2011/05/06/episodio-00x01-del-videocast-de-vivecodigoorg/
 categories:

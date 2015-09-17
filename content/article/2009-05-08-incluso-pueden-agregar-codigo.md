@@ -1,7 +1,6 @@
 ---
 title: Incluso pueden agregar código
 author: neodevelop
-layout: post
 date: 2009-05-08
 url: /2009/05/08/incluso-pueden-agregar-codigo/
 categories:

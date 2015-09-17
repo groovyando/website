@@ -1,7 +1,6 @@
 ---
 title: 'Curso: Desarrollo Profesional con SpringFramework 2.5'
 author: neodevelop
-layout: post
 date: 2009-06-01
 url: /2009/06/01/curso-desarrollo-profesional-con-springframework-25/
 categories:

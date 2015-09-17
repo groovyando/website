@@ -1,7 +1,6 @@
 ---
 title: '8a. Reunión de SpringHispano, grails.org.mx & JavaMexico'
 author: neodevelop
-layout: post
 date: 2009-08-18
 url: /2009/08/18/8a-reunion-de-springhispano-grails-org-mx-javamexico/
 categories:

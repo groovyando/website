@@ -1,7 +1,6 @@
 ---
 title: Podcast de GrailsMX, Temporada 2 – Episodio 0
 author: neodevelop
-layout: post
 date: 2013-02-05
 url: /2013/02/05/podcast-de-grailsmx-temporada-2-episodio-0/
 enclosure:

@@ -1,7 +1,6 @@
 ---
 title: Videos de la 22a. reunion de SpringHispano y GrailsMX
 author: neodevelop
-layout: post
 date: 2011-12-15
 url: /2011/12/15/videos-de-la-22a-reunion-de-springhispano-y-grailsmx/
 categories:

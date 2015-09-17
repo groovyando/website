@@ -1,7 +1,6 @@
 ---
 title: Workshop de Git + Github en SynergyJ, charla abierta y Drinkup con @matthewmccull
 author: neodevelop
-layout: post
 date: 2012-05-01
 url: /2012/05/01/workshop-de-git-github-en-synergyj-charla-abierta-y-drinkup-con-matthewmccull/
 categories:

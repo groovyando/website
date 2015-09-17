@@ -1,7 +1,6 @@
 ---
 title: Podcast ViveCodigo 00×05
 author: neodevelop
-layout: post
 date: 2011-07-03
 url: /2011/07/03/podcast-vivecodigo-00x05/
 enclosure:

@@ -1,7 +1,6 @@
 ---
 title: La liberación de Grails 1.2-M2
 author: neodevelop
-layout: post
 date: 2009-08-11
 url: /2009/08/11/la-liberacion-de-grails-12-m2/
 categories:

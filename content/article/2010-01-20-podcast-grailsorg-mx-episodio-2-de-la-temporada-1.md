@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 2 de la Temporada 1'
 author: domix
-layout: post
 date: 2010-01-20
 url: /2010/01/20/podcast-grailsorg-mx-episodio-2-de-la-temporada-1/
 enclosure:

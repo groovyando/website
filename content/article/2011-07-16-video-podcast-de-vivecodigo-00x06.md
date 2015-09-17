@@ -1,7 +1,6 @@
 ---
 title: Video / Podcast de ViveCodigo 00×06
 author: neodevelop
-layout: post
 date: 2011-07-16
 url: /2011/07/16/video-podcast-de-vivecodigo-00x06/
 enclosure:

@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 9 de la Temporada 1: Blogs, resenas de aplicaciones OpenSource'
 author: domix
-layout: post
 date: 2010-07-08
 url: /2010/07/08/podcast-grailsorg-mx-episodio-9-de-la-temporada-1-blogs-resenas-de-aplicaciones-opensource/
 enclosure:

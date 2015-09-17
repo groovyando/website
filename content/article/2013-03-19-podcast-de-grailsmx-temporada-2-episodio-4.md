@@ -1,7 +1,6 @@
 ---
 title: Podcast de GrailsMX, temporada 2 episodio 4
 author: neodevelop
-layout: post
 date: 2013-03-19
 url: /2013/03/19/podcast-de-grailsmx-temporada-2-episodio-4/
 categories:

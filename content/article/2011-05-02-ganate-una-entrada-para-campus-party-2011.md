@@ -1,7 +1,6 @@
 ---
 title: Gánate una entrada para Campus Party 2011
 author: neodevelop
-layout: post
 date: 2011-05-02
 url: /2011/05/02/ganate-una-entrada-para-campus-party-2011/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Funcionalidad de actionSubmit
 author: dracof
-layout: post
 date: 2009-08-19
 url: /2009/08/19/funcionalidad-de-actionsubmit/
 categories:

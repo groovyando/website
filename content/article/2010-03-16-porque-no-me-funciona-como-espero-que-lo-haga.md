@@ -1,7 +1,6 @@
 ---
 title: ¿porque no me funciona como espero que lo haga?
 author: itubal
-layout: post
 date: 2010-03-16
 url: /2010/03/16/porque-no-me-funciona-como-espero-que-lo-haga/
 categories:

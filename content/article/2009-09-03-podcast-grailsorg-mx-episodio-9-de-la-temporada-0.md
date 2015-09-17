@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 9 de la Temporada 0'
 author: domix
-layout: post
 date: 2009-09-03
 url: /2009/09/03/podcast-grailsorg-mx-episodio-9-de-la-temporada-0/
 enclosure:

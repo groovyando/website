@@ -1,7 +1,6 @@
 ---
 title: 'Videopodcast de ViveCodigo 00×14: Entrevista con Agustín Ramos'
 author: neodevelop
-layout: post
 date: 2012-02-22
 url: /2012/02/22/videopodcast-de-vivecodigo-00x14-entrevista-con-agustin-ramos/
 enclosure:

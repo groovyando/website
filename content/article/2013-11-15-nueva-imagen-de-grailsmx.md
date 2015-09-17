@@ -1,7 +1,6 @@
 ---
 title: Nueva Imagen de GrailsMX
 author: cggg88
-layout: post
 date: 2013-11-15
 url: /2013/11/15/nueva-imagen-de-grailsmx/
 categories:

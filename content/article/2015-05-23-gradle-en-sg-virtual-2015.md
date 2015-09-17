@@ -1,9 +1,9 @@
 ---
 title: Gradle en SG Virtual 2015
 author: domix
-layout: post
 date: 2015-05-23T21:28:47-05:00
 url: /2015/05/23/gradle-en-sg-virtual-2015/
+#featured_image: http://themes.quemalabs.com/vito/wp-content/uploads/2012/05/photo-1428976365951-b70e0fa5c551-953x536.jpeg
 categories:
   - Groovy
 tags:

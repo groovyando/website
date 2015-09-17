@@ -1,7 +1,6 @@
 ---
 title: Griffon en NetBeans 6.8
 author: itubal
-layout: post
 date: 2010-01-22
 url: /2010/01/22/griffon-en-netbeans-68/
 categories:

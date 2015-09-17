@@ -1,7 +1,6 @@
 ---
 title: save() en un filtro ¿es posible?
 author: itubal
-layout: post
 date: 2010-04-05
 url: /2010/04/05/save-en-un-filtro-es-posible/
 categories:

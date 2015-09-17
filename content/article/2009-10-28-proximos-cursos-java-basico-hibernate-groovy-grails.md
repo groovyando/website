@@ -1,7 +1,6 @@
 ---
 title: 'Próximos cursos: Java Básico, Hibernate, Groovy & Grails'
 author: neodevelop
-layout: post
 date: 2009-10-28
 url: /2009/10/28/proximos-cursos-java-basico-hibernate-groovy-grails/
 categories:

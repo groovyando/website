@@ -1,7 +1,6 @@
 ---
 title: Podcast de ViveCodigo 00×02 – El lenguaje Scala para la JVM
 author: neodevelop
-layout: post
 date: 2011-05-24
 url: /2011/05/24/podcast-de-vivecodigo-00x02-el-lenguaje-scala-para-la-jvm/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Podcast de GrailsMx, temporada 2 episodio 3
 author: neodevelop
-layout: post
 date: 2013-03-06
 url: /2013/03/06/podcast-de-grailsmx-temporada-2-episodio-3/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Edición de código para Groovy y Grails
 author: MIguel-1.mx
-layout: post
 date: 2009-07-09
 url: /2009/07/09/edicion-de-codigo-para-groovy-y-grails/
 categories:
@@ -61,7 +60,14 @@ categories:
   Para (X)Emacs (no discutamos) existen dos alternativas de plugin para groovy. A partir del modo-ruby (<a href='http://groovy.codehaus.org/Emacs+Plugin'>http://groovy.codehaus.org/Emacs+Plugin</a> o basado en el modo-CC (<a href='http://groovy.codehaus.org/Emacs+Plugin'>http://groovy.codehaus.org/Emacs+Plugin</a>), recordando que son mutuamente excluyentes. Asimismo, puede habilitar un modo-Groovy descargando el archivo <a href='http://svn.groovy.codehaus.org/browse/~raw,r=HEAD/groovy/trunk/groovy/ide/emacs/inf-groovy.el'>http://svn.groovy.codehaus.org/browse/~raw,r=HEAD/groovy/trunk/groovy/ide/emacs/inf-groovy.el</a> y coloc&aacute;ndola en la ruta de carga predeterminada de Emacs. Enseguida, agregue las siguientes l&iacute;neas a su archivo ~/.emacs:
 </p>
 
-<pre class='brush:text'>;;; turn on syntax hilighting (global-font-lock-mode 1)  ;;; use groovy-mode when file ends in .groovy or has #!/bin/groovy at start (autoload 'groovy-mode 'groovy-mode' 'Groovy editing mode.' t) (add-to-list 'auto-mode-alist '('.groovy$' . groovy-mode)) (add-to-list 'interpreter-mode-alist '('groovy' . groovy-mode)) </pre>
+<pre class='brush:text'>;;; turn on syntax hilighting
+ (global-font-lock-mode 1)
+ 
+ ;;; use groovy-mode when file ends in .groovy or has #!/bin/groovy at start
+ (autoload 'groovy-mode 'groovy-mode' 'Groovy editing mode.' t)
+ (add-to-list 'auto-mode-alist '('.groovy$' . groovy-mode))
+ (add-to-list 'interpreter-mode-alist '('groovy' . groovy-mode))
+ </pre>
 
 * * *
 

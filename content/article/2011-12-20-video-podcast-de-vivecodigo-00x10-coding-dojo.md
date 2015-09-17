@@ -1,7 +1,6 @@
 ---
 title: Video podcast de ViveCodigo 00×10 – Coding Dojo
 author: neodevelop
-layout: post
 date: 2011-12-20
 url: /2011/12/20/video-podcast-de-vivecodigo-00x10-coding-dojo/
 enclosure:

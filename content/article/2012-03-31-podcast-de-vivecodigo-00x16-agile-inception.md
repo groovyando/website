@@ -1,7 +1,6 @@
 ---
 title: 'Podcast de ViveCodigo 00×16 : Agile inception'
 author: neodevelop
-layout: post
 date: 2012-03-31
 url: /2012/03/31/podcast-de-vivecodigo-00x16-agile-inception/
 categories:

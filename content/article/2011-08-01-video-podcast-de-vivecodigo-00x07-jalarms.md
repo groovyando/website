@@ -1,7 +1,6 @@
 ---
 title: Video podcast de ViveCodigo 00×07 – jAlarms
 author: neodevelop
-layout: post
 date: 2011-08-01
 url: /2011/08/01/video-podcast-de-vivecodigo-00x07-jalarms/
 enclosure:

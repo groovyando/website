@@ -1,7 +1,6 @@
 ---
 title: Clases groovy y java en Eclipse
 author: dracof
-layout: post
 date: 2010-05-07
 url: /2010/05/07/clases-groovy-y-java-en-eclipse/
 categories:

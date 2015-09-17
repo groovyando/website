@@ -1,7 +1,6 @@
 ---
 title: Avances en grails.org.mx
 author: neodevelop
-layout: post
 date: 2009-06-22
 url: /2009/06/22/avances-en-grailsorg-mx/
 categories:

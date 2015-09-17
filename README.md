@@ -80,7 +80,6 @@ Un _feature_ muy interesante de Hugo es el [_Front Matter_][5], Hugo agrega al i
   categories:
     - category
   date: 2015-04-12T14:02:40-05:00
-  layout: post
   tags:
     - tag
   title: mi-post
@@ -93,7 +92,6 @@ Se debe agregar la información sobre el _post_ lo más detallada posible. Un ej
   ---
   title: 1er BarCamp de Testing en la Ciudad de México
   author: cggg88
-  layout: post
   date: 2013-11-14
   url: /2013/11/14/1er-barcamp-de-testing-en-la-ciudad-de-mexico/
   categories:

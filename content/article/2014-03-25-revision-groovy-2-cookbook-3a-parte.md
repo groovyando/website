@@ -1,7 +1,6 @@
 ---
 title: 'Revisión: Groovy 2 Cookbook (3a. Parte)'
 author: neodevelop
-layout: post
 date: 2014-03-25
 url: /2014/03/25/revision-groovy-2-cookbook-3a-parte/
 categories:

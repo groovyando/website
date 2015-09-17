@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 5 de la Temporada 1'
 author: domix
-layout: post
 date: 2010-03-10
 url: /2010/03/10/podcast-grailsorg-mx-episodio-5-de-la-temporada-1/
 enclosure:

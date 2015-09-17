@@ -1,7 +1,6 @@
 ---
 title: 'Podcast de ViveCodigo 00×17 : Entrevista con Graeme Rocher'
 author: neodevelop
-layout: post
 date: 2012-04-09
 url: /2012/04/09/podcast-de-vivecodigo-00x17-entrevista-con-graeme-rocher/
 enclosure:

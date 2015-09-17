@@ -1,7 +1,6 @@
 ---
 title: 'Video: Groovy y la productividad para desarrolladores Java'
 author: neodevelop
-layout: post
 date: 2010-05-27
 url: /2010/05/27/video-groovy-y-la-productividad-para-desarrolladores-java/
 categories:

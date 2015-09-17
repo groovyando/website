@@ -3,31 +3,33 @@ name = "GrailsMX"
 description = "Groovy y Grails en tu idioma"
 baseurl = "http://grails.org.mx"
 languageCode = "es-MX"
-title = "Groovy y Grails en tu idioma"
-theme = "default"
+title = "Groovyando"
+theme = "vito"
 
-pygmentsuseclasses = true
-disqusShortname = "groovyando"
+[params]
+  PublishedDateFormat = "2006-01-02"
+  TimestampFormat = "2006-01-02T15:04:05Z07:00"
+  logo = "<i class=\"fa fa-home\"></i>"
+  cdnprefix = "http://res.cloudinary.com/thehome-dk/image/upload"
+  highlight = "tomorrow-night"
+  languageCode = "es-mx"
+  forkGitHubUrl = "https://github.com/groovyando/website"
+  tagline = "Groovy y Grails en tu idioma"
+  github = "Groovyando"
+  slack = "http://slack.groovyando.org"
+  twitter = "Groovyando"
+  #facebook = "https://www.facebook.com/groups/155793886960/"
+  #vimeo = "springhispano"
+  #googleplus = "https://plus.google.com/u/5/communities/102613290119984013640"
+  avatar = "/avatar.png"
+  disqusShortname = "groovyando"
+  GoogleAnaliticsId = "UA-61658224-1"
 
-
-Auther = "GrailsMX"
-Autherr = "GrailsMX"
-Profile = "Groovy y Grails en tu idioma"
-TwitterId = "grailsmx"
-GitHubId = "grailsmx"
-GoogleAnaliticsId = "UA-61658224-1"
 
 
 [indexes]
     category = "categories"
     tag = "tags"
-
-[params]
-    PublishedDateFormat = "2006-01-02"
-    TimestampFormat = "2006-01-02T15:04:05Z07:00"
-    logo = "<i class=\"fa fa-home\"></i>"
-    cdnprefix = "http://res.cloudinary.com/thehome-dk/image/upload"
-    highlight = "tomorrow-night"
 
 [[menu.main]]
     name = "Home"

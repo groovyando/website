@@ -1,7 +1,6 @@
 ---
 title: Podcast de GrailsMx, temporada 2 episodio 6
 author: cggg88
-layout: post
 date: 2013-08-26
 url: /2013/08/26/podcast-de-grailsmx-temporada-2-episodio-6/
 categories:

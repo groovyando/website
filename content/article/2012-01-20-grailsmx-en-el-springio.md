@@ -1,7 +1,6 @@
 ---
 title: GrailsMx en el SpringIO
 author: neodevelop
-layout: post
 date: 2012-01-20
 url: /2012/01/20/grailsmx-en-el-springio/
 categories:

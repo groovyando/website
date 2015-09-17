@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 3 de la Temporada 1'
 author: domix
-layout: post
 date: 2010-02-04
 url: /2010/02/04/podcast-grailsorg-mx-episodio-3-de-la-temporada-1/
 enclosure:
@@ -41,7 +40,9 @@ categories:
   * [Make Your Web Site &#8216;Groovy&#8217;][2]
   * Tema del dia: Closures<p style='margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Lucida Grande''>Ejemplo de un closure sencillo</p> 
 
-<pre class='brush:groovy'>def clos = { println 'hello!' } println 'Executing the Closure:' clos()  </pre>
+<pre class='brush:groovy'>def clos = { println 'hello!' }
+ println 'Executing the Closure:'
+ clos()  </pre>
 
 &nbsp;<p style='margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Lucida Grande''>
 

@@ -1,7 +1,6 @@
 ---
 title: Agregando metodos a java.io.File
 author: neodevelop
-layout: post
 date: 2012-05-24
 url: /2012/05/24/agregando-metodos-a-java-io-file/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: 9a. Reunión de SpringHispano.org, Grails.org.mx y JavaMexico
 author: neodevelop
-layout: post
 date: 2009-09-24
 url: /2009/09/24/9a-reunion-de-springhispano-org-grails-org-mx-y-javamexico/
 categories:

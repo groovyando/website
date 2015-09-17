@@ -1,7 +1,6 @@
 ---
 title: Alterando tablas con Database Migration
 author: sohjiro
-layout: post
 date: 2012-11-18
 url: /2012/11/18/alterando-tablas-con-database-migration/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: 'Screencast grails.org.mx Temporada 0 Episodio 1: Ciclos en Groovy y colecciones'
 author: domix
-layout: post
 date: 2010-01-27
 url: /2010/01/27/screencast-grailsorg-mx-temporada-0-episodio-1-ciclos-en-groovy-y-colecciones/
 categories:

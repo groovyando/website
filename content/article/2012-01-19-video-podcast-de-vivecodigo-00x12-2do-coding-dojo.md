@@ -1,7 +1,6 @@
 ---
 title: Video podcast de ViveCodigo 00×12 – 2do. Coding Dojo
 author: neodevelop
-layout: post
 date: 2012-01-19
 url: /2012/01/19/video-podcast-de-vivecodigo-00x12-2do-coding-dojo/
 categories:

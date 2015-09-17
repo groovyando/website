@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 1 de la Temporada'
 author: neodevelop
-layout: post
 date: 2009-12-15
 url: /2009/12/15/podcast-grailsorg-mx-episodio-1-de-la-temporada/
 enclosure:
@@ -21,7 +20,68 @@ En este episodio hablamos sobre uno de los usos de la metaprogramaci&oacute;n qu
 
 &nbsp;
 
-<pre class='brush:groovy'>//Esta anotacion nos sirve para indicarle a Groovy //que use la libreria de Hsqldb @Grab(group='org.hsqldb', module='hsqldb', version='1.8.0.10') class Conexion { 	def sql 	public Conexion() { 		/* Esto es un truco para que jale la anotacion @Grab en Groovy 1.6.x,  		   en Groovy 1.7 deberia funcionar sin este truco */ 		this.getClass().getClassLoader().getURLs().each { 			ClassLoader.getSystemClassLoader().addURL(it) 		} 		 		/* Creamos nuestra conexion a la base de datos, los parametros enviados son: 		   url, username, password, y driverClassName */ 		sql = groovy.sql.Sql.newInstance('jdbc:hsqldb:file:ejemploDB', 'sa', '', 'org.hsqldb.jdbcDriver') 	} 	  	def creaEstructura() { 		// delete table if previously created 		try { 		   sql.execute('drop table PERSON') 		} catch(Exception e){} 		 		// create table 		sql.execute('''create table PERSON ( 		    id integer not null primary key, 		    firstname varchar(20), 		    lastname varchar(20), 		    location_id integer, 		    location_name varchar(30) 		)''') 		sql.commit() 	} 	 	def agregaRegistros() { 		// now let's populate the table 		def people = sql.dataSet('PERSON') 		people.add( firstname:'James', lastname:'Strachan', id:1, location_id:10, location_name:'London' ) 		people.add( firstname:'Bob', lastname:'Mcwhirter', id:2, location_id:20, location_name:'Atlanta' ) 		people.add( firstname:'Sam', lastname:'Pullara', id:3, location_id:30, location_name:'California' ) 		sql.commit() 		def results = sql.firstRow('select firstname, lastname from PERSON where id=1').firstname 		def expected = 'James' 		assert results == expected 		 		// do a query to confirm that our change actually worked 		results = sql.firstRow('select firstname, lastname from PERSON where id=1').firstname 		expected = 'James' 		assert results == expected 	} 	 	def cierraConexion() { 		sql.close() 	} }  def c = new Conexion() c.creaEstructura() c.agregaRegistros() c.cierraConexion() </pre>
+<pre class='brush:groovy'>//Esta anotacion nos sirve para indicarle a Groovy
+ //que use la libreria de Hsqldb
+ @Grab(group='org.hsqldb', module='hsqldb', version='1.8.0.10')
+ class Conexion {
+ 	def sql
+ 	public Conexion() {
+ 		/* Esto es un truco para que jale la anotacion @Grab en Groovy 1.6.x, 
+ 		   en Groovy 1.7 deberia funcionar sin este truco */
+ 		this.getClass().getClassLoader().getURLs().each {
+ 			ClassLoader.getSystemClassLoader().addURL(it)
+ 		}
+ 		
+ 		/* Creamos nuestra conexion a la base de datos, los parametros enviados son:
+ 		   url, username, password, y driverClassName */
+ 		sql = groovy.sql.Sql.newInstance('jdbc:hsqldb:file:ejemploDB', 'sa', '', 'org.hsqldb.jdbcDriver')
+ 	}
+ 	
+ 
+ 	def creaEstructura() {
+ 		// delete table if previously created
+ 		try {
+ 		   sql.execute('drop table PERSON')
+ 		} catch(Exception e){}
+ 		
+ 		// create table
+ 		sql.execute('''create table PERSON (
+ 		    id integer not null primary key,
+ 		    firstname varchar(20),
+ 		    lastname varchar(20),
+ 		    location_id integer,
+ 		    location_name varchar(30)
+ 		)''')
+ 		sql.commit()
+ 	}
+ 	
+ 	def agregaRegistros() {
+ 		// now let's populate the table
+ 		def people = sql.dataSet('PERSON')
+ 		people.add( firstname:'James', lastname:'Strachan', id:1, location_id:10, location_name:'London' )
+ 		people.add( firstname:'Bob', lastname:'Mcwhirter', id:2, location_id:20, location_name:'Atlanta' )
+ 		people.add( firstname:'Sam', lastname:'Pullara', id:3, location_id:30, location_name:'California' )
+ 		sql.commit()
+ 		def results = sql.firstRow('select firstname, lastname from PERSON where id=1').firstname
+ 		def expected = 'James'
+ 		assert results == expected
+ 		
+ 		// do a query to confirm that our change actually worked
+ 		results = sql.firstRow('select firstname, lastname from PERSON where id=1').firstname
+ 		expected = 'James'
+ 		assert results == expected
+ 	}
+ 	
+ 	def cierraConexion() {
+ 		sql.close()
+ 	}
+ }
+ 
+ def c = new Conexion()
+ c.creaEstructura()
+ c.agregaRegistros()
+ c.cierraConexion()
+ </pre>
 
 Los temas a detalle son:
 

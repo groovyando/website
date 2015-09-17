@@ -1,7 +1,6 @@
 ---
 title: Copa Desarrollo en Acción
 author: neodevelop
-layout: post
 date: 2010-08-16
 url: /2010/08/16/copa-desarrollo-en-accion/
 categories:

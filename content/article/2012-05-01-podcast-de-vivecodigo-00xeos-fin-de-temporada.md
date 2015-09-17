@@ -1,7 +1,6 @@
 ---
 title: 'Podcast de ViveCodigo 00xEOS : Fin de temporada'
 author: neodevelop
-layout: post
 date: 2012-05-01
 url: /2012/05/01/podcast-de-vivecodigo-00xeos-fin-de-temporada/
 categories:

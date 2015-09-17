@@ -1,7 +1,6 @@
 ---
 title: 10a. Reunion de la Comunidad Springhispano.org, grails.org.mx y JavaMexico
 author: neodevelop
-layout: post
 date: 2009-10-26
 url: /2009/10/26/10a-reunion-de-la-comunidad-springhispano-org-grails-org-mx-y-javamexico/
 categories:

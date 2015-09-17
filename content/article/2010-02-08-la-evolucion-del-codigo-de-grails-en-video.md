@@ -1,7 +1,6 @@
 ---
 title: La evolución del Código de Grails en video
 author: domix
-layout: post
 date: 2010-02-08
 url: /2010/02/08/la-evolucion-del-codigo-de-grails-en-video/
 categories:

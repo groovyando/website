@@ -1,7 +1,6 @@
 ---
 title: Podcast de ViveCodigo 00×11 – Entrevista con Jorge Ortiz
 author: neodevelop
-layout: post
 date: 2012-01-06
 url: /2012/01/06/podcast-de-vivecodigo-00x11-entrevista-con-jorge-ortiz/
 enclosure:

@@ -1,7 +1,6 @@
 ---
 title: Lista de correo de Grails en español
 author: ialcazar
-layout: post
 date: 2010-05-08
 url: /2010/05/08/lista-de-correo-de-grails-en-espanol/
 categories:

@@ -1,7 +1,6 @@
 ---
 title: Searchable plugin + DataBase Migration plugin
 author: sohjiro
-layout: post
 date: 2013-01-14
 url: /2013/01/14/searchable-plugin-database-migration-plugin/
 categories:

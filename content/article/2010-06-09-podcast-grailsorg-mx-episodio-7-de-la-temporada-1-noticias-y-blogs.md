@@ -1,7 +1,6 @@
 ---
 title: 'Podcast grails.org.mx: Episodio 7 de la Temporada 1: Noticias y Blogs'
 author: domix
-layout: post
 date: 2010-06-09
 url: /2010/06/09/podcast-grailsorg-mx-episodio-7-de-la-temporada-1-noticias-y-blogs/
 enclosure:
