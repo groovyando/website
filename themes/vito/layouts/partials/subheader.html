@@ -3,7 +3,7 @@
 
         <div class="logo_container col-md-4 col-sm-4">
             <h1>
-                <a href="{{ .Site.BaseURL }}" class="ql_logo" rel="home">{{ .Title }}</a>
+                <a href="{{ .Site.BaseURL }}" class="ql_logo" rel="home">{{ .Site.Title }}</a>
             </h1>
 
 
@@ -17,10 +17,10 @@
             <div class="collapse navbar-collapse" id="ql-navigation">
                 <nav id="jqueryslidemenu" class="jqueryslidemenu navbar " role="navigation">
                     <ul id="nav" class="nav">
-                        <li id="menu-item-4368" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-4368"><a href="http://themes.quemalabs.com/vito/">Home</a></li>
-                        <li id="menu-item-4126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4126"><a href="http://themes.quemalabs.com/vito/about-us/">About</a></li>
-                        <li id="menu-item-4385" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4385"><a href="mailto:test@test.com">Contact</a></li>
-                        <li id="menu-item-4386" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4386"><a href="https://wordpress.org/themes/vito/">Download</a></li>
+                        {{ range .Site.Menus.main }}
+                        <li id="menu-item-4126" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4126"><a href="{{.URL}}">{{ .Name }}</a></li>
+                        {{end}}
+                        
                     </ul>                                
                 </nav>
             </div>

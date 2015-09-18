@@ -1,3 +1,4 @@
+
 {{ partial "featured_image.html" . }}
 
 <article id="post-115" class="post-115 post type-post status-publish format-standard has-post-thumbnail hentry category-web-design tag-audi-2 tag-italy tag-red" >
@@ -10,6 +11,19 @@
         </h2>
         <div class="entry">
           {{ .Summary }}
+
+          {{ with .Params.tags }}
+            
+              <p class="tags">
+              {{ range . }}
+                <i class="fa fa-tag"> <a href="/tags/{{ . | urlize }}" title="Ver todos los contenidos con el tag {{.}}" rel="tag">{{ . }}</a></i>
+
+                
+                {{ end }}
+              </p>
+            
+            {{ end }}
+
           <p>
             <a class="more-link btn btn-ql" href="{{ .Permalink }}">Read More</a></p>
             <div class="clearfix"></div>
@@ -21,9 +35,7 @@
           <div class="metadata">
             <ul>
               <li class="meta_date">
-                <time class="entry-date" datetime="2012-05-18T13:15:47+00:00">
-                  <a href="{{ .Permalink }}">May 18, 2012</a>
-                </time>
+                <a href="{{ .Permalink }}">{{ .Date.Format "2 Jan 2006" }}</a>
               </li>
               {{ if .Site.DisqusShortname }}
               <li class="meta_comments disqus-comment-count">
@@ -35,7 +47,7 @@
 
               <li class="meta_author">
                 <i class="fa fa-user"></i>
-                <a href="{{ .Site.BaseURL }}/author/{{if isset .Params "author" }}{{index .Params "author"}} {{else}}groovyando {{end}}">{{if isset .Params "author_name" }} {{ index .Params "author_name" }} {{else}} Staff {{end}}</a>
+                <a href="/author/{{if isset .Params "author" }}{{index .Params "author"}} {{else}}groovyando {{end}}">{{if isset .Params "author_name" }} {{ index .Params "author_name" }} {{else}} Staff {{end}}</a>
               </li>
 
               <li class="meta_readingtime">
@@ -53,17 +65,7 @@
               </li>
 
             </ul>
-            {{ with .Params.tags }}
-            <div class="post-tags">
-              <p class="tags">
-              {{ range . }}
-                <i class="fa fa-tags"> <a href="/tags/{{ . | urlize }}" title="Ver todos los contenidos con el tag {{.}}" rel="tag">{{ . }}</a></i>
-
-                
-                {{ end }}
-              </p>
-            </div>
-            {{ end }}
+            
             <div class="clearfix"></div>
           </div><!-- /metadata -->
 

@@ -30,8 +30,8 @@ html {
   opacity: 1;
 }
 .pace-done.home #header {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+  -webkit-animation-duration: 50ms;
+  animation-duration: 50ms;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
   -webkit-animation-name: fadeInDown;
@@ -43,16 +43,16 @@ html {
   -ms-transform: translate(0, 60px);
   -o-transform: translate(0, 60px);
   transform: translate(0, 60px);
-  -webkit-transition: all 600ms;
-  -o-transition: all 600ms;
-  transition: all 600ms;
+  -webkit-transition: all 50ms;
+  -o-transition: all 50ms;
+  transition: all 50ms;
 }
 .no-js .home .post {
   opacity: 1;
 }
 .pace-done.home .post {
-  -webkit-transition-delay: 800ms;
-  transition-delay: 800ms;
+  -webkit-transition-delay: 50ms;
+  transition-delay: 50ms;
   opacity: 1;
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -65,16 +65,16 @@ html {
   -ms-transform: translate(0, -60px);
   -o-transform: translate(0, -60px);
   transform: translate(0, -60px);
-  -webkit-transition: all 600ms;
-  -o-transition: all 600ms;
-  transition: all 600ms;
+  -webkit-transition: all 50ms;
+  -o-transition: all 50ms;
+  transition: all 50ms;
 }
 .no-js .home #sidebar {
   opacity: 1;
 }
 .pace-done.home #sidebar {
-  -webkit-transition-delay: 1100ms;
-  transition-delay: 1100ms;
+  -webkit-transition-delay: 50ms;
+  transition-delay: 50ms;
   opacity: 1;
   -webkit-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
@@ -107,9 +107,9 @@ Header
   font-size: 1.875rem;
   color: #333333;
   font-weight: bold;
-  -webkit-transition: all 400ms ease-in-out;
-  -o-transition: all 400ms ease-in-out;
-  transition: all 400ms ease-in-out;
+  -webkit-transition: all 50ms ease-in-out;
+  -o-transition: all 50ms ease-in-out;
+  transition: all 50ms ease-in-out;
 }
 .logo_container .ql_logo:hover {
   text-decoration: none;
@@ -148,9 +148,9 @@ Nav Menu
   text-decoration: none;
   font-size: 16px;
   font-size: 1rem;
-  -webkit-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+  -webkit-transition: all 50ms ease-in-out;
+  -o-transition: all 50ms ease-in-out;
+  transition: all 50ms ease-in-out;
   padding-left: 0.9375rem;
   padding-right: 0.9375rem;
   color: #777777;
@@ -252,13 +252,13 @@ Social Nav
 ---------------------------------------*/
 .nav_social {
   position: relative;
-  margin-bottom: 4.375em;
+  margin-bottom: 2.375em;
   text-align: center;
 }
 .nav_social li {
   width: 45px;
   height: 45px;
-  margin: 10px;
+  margin: 5px;
   position: relative;
   display: inline-block;
 }
@@ -291,6 +291,9 @@ Social Nav
   -webkit-animation: social_icons_anim 600ms ease;
   -o-animation: social_icons_anim 600ms ease;
   animation: social_icons_anim 600ms ease;
+}
+.nav_social li.n_github a {
+  color: #427097;
 }
 .nav_social li.n_facebook a {
   color: #3B5998;
@@ -333,6 +336,9 @@ Social Nav
 }
 .nav_social li.n_rss a {
   color: #FF6600;
+}
+.nav_social li.n_github a:hover {
+  background-color: #427097;
 }
 .nav_social li.n_facebook a:hover {
   background-color: #3B5998;
@@ -396,7 +402,7 @@ Blog & Pages
 /*------------------------------------------*/
 .post,
 .no-content {
-  margin-bottom: 80px;
+  margin-bottom: 20px;
 }
 .post-inside {
   background-color: #fff;
@@ -407,7 +413,7 @@ Blog & Pages
   padding: 40px 60px 60px;
 }
 .entry {
-  width: 95%;
+  width: 100%;
 }
 .page .entry {
   width: 100%;
@@ -417,13 +423,17 @@ Blog & Pages
 .post_title {
   margin-bottom: 0.88235294117647em;
   margin-top: 0;
-  width: 95%;
+  width: 100%;
   font-size: 38px;
   font-size: 2.375rem;
 }
 .post_title a {
   color: inherit;
   text-align: left;
+}
+
+.share-container {
+  margin-bottom: 1.5em;
 }
 /*Read more               */
 /*------------------------------------------*/
@@ -487,7 +497,9 @@ Blog & Pages
 /*Metadata                  */
 /*------------------------------------------*/
 .metadata {
-  margin: 0 0 0.6em 0;
+  /*margin: 0 0 0.6em 0;*/
+      padding-left: 10px;
+    padding-right: 10px;
 }
 .metadata ul {
   margin: 0;
@@ -524,7 +536,7 @@ Blog & Pages
   text-decoration: underline;
 }
 .metadata ul li.meta_category {
-  margin-top: 20px;
+  margin-top: 10px;
   text-transform: lowercase;
 }
 .metadata ul li.meta_category a {
@@ -541,7 +553,7 @@ Blog & Pages
 /*Tags                        */
 /*----------------------------------------------------------------------*/
 .tags {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .tags i {
   margin-right: 10px;
@@ -890,14 +902,14 @@ Sidebar
 .sidebar-inside {
   background-color: #fff;
   margin-left: 20px;
-  padding: 20px 60px 60px;
+  padding: 20px 40px 40px;
 }
 /*
 Widgets
 --------------------------------
 */
 #sidebar .widget {
-  margin-bottom: 4.375em;
+  margin-bottom: 1.375em;
   position: relative;
   font-size: 14px;
   font-size: 0.875rem;
@@ -927,7 +939,7 @@ Widgets
   list-style: none;
   border-bottom: #eeeeee 1px solid;
   display: inline-block;
-  width: 44%;
+  width: 34%;
   margin-right: 15px;
   position: relative;
 }
@@ -5606,7 +5618,7 @@ Responsive Styles
   ==========================================
   */
   #sidebar .sidebar-inside {
-    padding: 20px 40px 40px;
+    padding: 20px 20px 20px;
     margin-left: 0;
   }
   #sidebar .widget ul li {

@@ -1,7 +1,7 @@
-url = "http://grails.org.mx"
+url = "http://groovyando.org"
 name = "GrailsMX"
 description = "Groovy y Grails en tu idioma"
-baseurl = "http://grails.org.mx"
+baseurl = "http://groovyando.org"
 languageCode = "es-MX"
 title = "Groovyando"
 theme = "vito"
@@ -24,7 +24,7 @@ theme = "vito"
   avatar = "/avatar.png"
   disqusShortname = "groovyando"
   GoogleAnaliticsId = "UA-61658224-1"
-
+  about = "¡Hola! Esta es la comunidad que difunde Groovy y su ecosistema en Español. Proyecto fundado por Domingo Suarez Torres"
 
 
 [indexes]
