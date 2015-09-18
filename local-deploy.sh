@@ -1,3 +1,33 @@
 #!/usr/bin/env bash
 
-./build.sh && rsync -avzhe ssh --delete --delete-after ./public /www/grails.org.mx
+baseDir='/www'
+env=''
+hugoParams=''
+
+while getopts ":b:e:p:" opt; do
+  case $opt in
+    b)
+      baseDir=$OPTARG
+      ;;
+    e)
+      env="$OPTARG."
+      ;;
+    p)
+      hugoParams=$hugoParams"$OPTARG "
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      exit 1
+      ;;
+    :)
+      echo "Option -$OPTARG requires an argument." >&2
+      exit 1
+      ;;
+  esac
+done
+
+dest="$baseDir/$env""groovyando.org"
+
+echo "Deploying website to $dest"
+
+./build.sh  $hugoParams && rsync -avzhe ssh --delete --delete-after ./public $dest
