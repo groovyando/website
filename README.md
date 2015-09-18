@@ -1,6 +1,6 @@
-# Grails México
+# Groovyando
 
-Este es el código fuente del sitio de [Grails.org.mx][4]. Antes usábamos Wordpress pero se convirtió en un problema cuando recibimos muchos ataques y mantener un CMS fue un problema que no queríamos tener.
+Este es el código fuente del sitio de [Groovyando][4]. Antes usábamos Wordpress pero se convirtió en un problema cuando recibimos muchos ataques y mantener un CMS fue un problema que no queríamos tener.
 
 Ahora el sitio de construye con [Hugo][1] que realmente necesita archivos [Markdown][3] y la definición de plantillas para generar un sitio estático.
 
@@ -12,7 +12,7 @@ __Si deseas participar, has _fork_, agrega tu entrada y manda un _Pull Request_.
 
 1. Descarga los fuentes del proyecto
 2. Instala [Hugo][1]
-  - Asegurate que la versión de Hugo sea por lo menos la _0.13_, de no ser así y si instalaste con brew, entonces haz un `brew update` e intenta de nuevo la instalación. 
+  - Asegurate que la versión de Hugo sea por lo menos la _0.14_
 3. En la raiz del proyecto en una terminal ejecuta:
 
     ```bash
@@ -124,7 +124,7 @@ En el _front matter_ se debe poner la información de la URL usando el siguiente
  [1]: http://gohugo.io
  [2]: http://localhost:1313/
  [3]: http://daringfireball.net/projects/markdown/
- [4]: http://grails.org.mx
+ [4]: http://groovyando.org
  [5]: http://gohugo.io/content/front-matter/
  [6]: https://disqus.com/
  
