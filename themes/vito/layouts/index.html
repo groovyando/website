@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<head>
+  <meta charset="UTF-8">
+
+  {{ partial "meta.html" . }}
+
+  <base href="{{ .Site.BaseURL }}">
+  <title>{{ .Site.Title }} {{ with .Site.Params.tagline }} :: {{ . | markdownify }}{{ end }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  <link href="{{ .RSSlink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+
+  {{ partial "head_includes.html" . }}
+
+</head>
+
+<body class="home blog vito ver1.0.12">
+
+
+  <div id="container" class="container">
+    <div class="row">
+
+      <section id="main" class="col-md-8">
+
+
+        {{ partial "subheader.html" . }}
+
+
+
+        <div id="content">
+
+          <!--  Content here-->          
+          
+
+
+          
+
+          {{ $paginator := .Paginate (where .Data.Pages "Type" "article") }}
+          {{ range $paginator.Pages }}
+            {{ .Render "summary" }}
+          {{ end }}
+
+          <div class="clearfix"></div>
+
+          <div class="clearfix"></div>
+
+          {{ partial "pagination.html" . }}
+          {{ template "_internal/pagination.html" . }}
+
+
+        </div><!-- /content -->
+      </section>
+
+      {{ partial "sidebar.html" . }}
+
+      <div class="clearfix"></div>
+    </div><!--/row -->
+  </div><!-- /container -->
+
+
+  {{ partial "footer.html" . }}
+
+</body>
+</html>

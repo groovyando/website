@@ -1,0 +1,77 @@
+{{ partial "featured_image.html" . }}
+
+<article id="post-115" class="post-115 post type-post status-publish format-standard has-post-thumbnail hentry category-web-design tag-audi-2 tag-italy tag-red" >
+
+  <div class="post-inside container-fluid">
+    <div class="row">
+      <div class="post-content col-md-9 col-lg-10">
+        <h2 class="post_title">
+          <a href="{{ .Permalink }}" rel="bookmark">{{ .Title }}</a>
+        </h2>
+        <div class="entry">
+          {{ .Summary }}
+          <p>
+            <a class="more-link btn btn-ql" href="{{ .Permalink }}">Read More</a></p>
+            <div class="clearfix"></div>
+          </div>
+          <div class="clearfix"></div>
+        </div><!-- /post_content -->
+
+        <div class="metadata col-md-3 col-lg-2">
+          <div class="metadata">
+            <ul>
+              <li class="meta_date">
+                <time class="entry-date" datetime="2012-05-18T13:15:47+00:00">
+                  <a href="{{ .Permalink }}">May 18, 2012</a>
+                </time>
+              </li>
+              {{ if .Site.DisqusShortname }}
+              <li class="meta_comments disqus-comment-count">
+                <a href="{{ .Permalink }}#disqus_thread">Comments</a>
+              </li>
+              {{ end }}
+
+
+
+              <li class="meta_author">
+                <i class="fa fa-user"></i>
+                <a href="{{ .Site.BaseURL }}/author/{{if isset .Params "author" }}{{index .Params "author"}} {{else}}groovyando {{end}}">{{if isset .Params "author_name" }} {{ index .Params "author_name" }} {{else}} Staff {{end}}</a>
+              </li>
+
+              <li class="meta_readingtime">
+                ~{{ .ReadingTime }} minutes lecture
+              </li>
+
+              <li class="meta_category">
+                {{ with .Params.categories }}
+                <div class="post-categories">
+                  {{ range . }}
+                  <a href="/categories/{{ . | urlize }}" title="Ver todos los contenido en {{.}}">{{.}}</a>
+                  {{end}}                
+                </div>
+                {{end}}
+              </li>
+
+            </ul>
+            {{ with .Params.tags }}
+            <div class="post-tags">
+              <p class="tags">
+              {{ range . }}
+                <i class="fa fa-tags"> <a href="/tags/{{ . | urlize }}" title="Ver todos los contenidos con el tag {{.}}" rel="tag">{{ . }}</a></i>
+
+                
+                {{ end }}
+              </p>
+            </div>
+            {{ end }}
+            <div class="clearfix"></div>
+          </div><!-- /metadata -->
+
+          <div class="clearfix"></div>
+        </div><!-- /metadata -->
+
+      </div><!-- /row -->
+    </div><!-- /post-inside -->
+
+    <div class="clearfix"></div>
+  </article>
