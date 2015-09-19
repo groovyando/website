@@ -27,7 +27,7 @@
 
 {{if isset .Params "featured_image" }}
 {{ $featuredImage := index .Params "featured_image" }}
-<meta property="og:image" content="{{ $featuredImage }}" />
+<meta property="og:image" content="{{ .Site.BaseURL }}{{ $featuredImage }}" />
 {{end}}
 
 <meta property="og:image:type" content="image/jpeg" />
@@ -58,7 +58,7 @@
 
 {{if isset .Params "featured_image" }}
 {{ $featuredImage := index .Params "featured_image" }}
-<meta name="twitter:image:src" content="{{ $featuredImage }}">
+<meta name="twitter:image:src" content="{{ .Site.BaseURL }}{{ $featuredImage }}">
 {{end}}
 
 
