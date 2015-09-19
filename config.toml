@@ -7,11 +7,6 @@ title = "Groovyando"
 theme = "vito"
 
 [params]
-  PublishedDateFormat = "2006-01-02"
-  TimestampFormat = "2006-01-02T15:04:05Z07:00"
-  logo = "<i class=\"fa fa-home\"></i>"
-  cdnprefix = "http://res.cloudinary.com/thehome-dk/image/upload"
-  highlight = "tomorrow-night"
   languageCode = "es-mx"
   forkGitHubUrl = "https://github.com/groovyando/website"
   tagline = "Groovy y Grails en tu idioma"
@@ -21,10 +16,14 @@ theme = "vito"
   #facebook = "https://www.facebook.com/groups/155793886960/"
   #vimeo = "springhispano"
   #googleplus = "https://plus.google.com/u/5/communities/102613290119984013640"
-  avatar = "/avatar.png"
   disqusShortname = "groovyando"
   GoogleAnaliticsId = "UA-61658224-1"
-  about = "¡Hola! Esta es la comunidad que difunde Groovy y su ecosistema en Español. Proyecto fundado por Domingo Suarez Torres"
+  about = "¡Hola! Esta es la comunidad que difunde Groovy y su ecosistema en Español."
+  copyrightYear = "2008-2015"
+  copyrightOwner = "Domingo Suarez Torres"
+  licenseURL = "http://creativecommons.org/licenses/by/3.0/"
+  licenseName = "Creative Commons Attribution"
+  licenseCaption = "Some rights reserved"
 
 
 [indexes]
