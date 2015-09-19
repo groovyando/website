@@ -98,7 +98,7 @@
 
   <div class="row">
     <div class="post-content col-md-12 col-lg-12">
-      
+
       <div class="entry">
         {{ .Content }}
 
@@ -117,6 +117,8 @@
         
         <div class="clearfix"></div>
         {{ partial "social-share.html" . }}
+
+        {{ partial "disqus.html" . }}        
       </div>
       <div class="clearfix"></div>
     </div>
