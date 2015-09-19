@@ -29,11 +29,11 @@
 
         <div id="content">
 
-          <!--  Content here-->          
-          
+          <!--  Content here-->
 
 
-          
+
+
           {{ partial "featured_image.html" . }}
 
           <article id="post-115" class="post-115 post type-post status-publish format-standard has-post-thumbnail hentry category-web-design tag-audi-2 tag-italy tag-red" >
@@ -81,13 +81,13 @@
             <div class="post-categories">
               {{ range . }}
               <a href="/categories/{{ . | urlize }}" title="Ver todos los contenido en {{.}}">{{.}}</a>
-              {{end}}                
+              {{end}}
             </div>
             {{end}}
           </li>
 
         </ul>
-        
+
         <div class="clearfix"></div>
       </div>
 
@@ -103,22 +103,22 @@
         {{ .Content }}
 
         {{ with .Params.tags }}
-        
+
         <p class="tags">
           {{ range . }}
           <i class="fa fa-tag"> <a href="/tags/{{ . | urlize }}" title="Ver todos los contenidos con el tag {{.}}" rel="tag">{{ . }}</a></i>
 
-          
+
           {{ end }}
         </p>
-        
+
         {{ end }}
 
-        
+
         <div class="clearfix"></div>
         {{ partial "social-share.html" . }}
 
-        {{ partial "disqus.html" . }}        
+        <!-- {{ partial "disqus.html" . }}-->
       </div>
       <div class="clearfix"></div>
     </div>
