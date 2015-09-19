@@ -21,9 +21,7 @@ En particular hubo una charla por parte de [Andrés Almiray][3] en la que hablo 
 
 Pueden ver a continuación la charla:
 
-
-<iframe width="640" height="360" src="https://www.youtube.com/embed/DOnRIVF57fA" frameborder="0" allowfullscreen></iframe>
-
+{{% youtube DOnRIVF57fA %}}
 
 [1]: http://sg.com.mx/sgvirtual
 [2]: http://sg.com.mx/buzz/resultados-sg-virtual-8va-edicion
