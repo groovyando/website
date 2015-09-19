@@ -37,7 +37,7 @@
               <li class="meta_date">
                 <a href="{{ .Permalink }}">{{ .Date.Format "2 Jan 2006" }}</a>
               </li>
-              {{ if .Site.DisqusShortname }}
+              {{ if .Site.Params.disqusShortname }}
               <li class="meta_comments disqus-comment-count">
                 <a href="{{ .Permalink }}#disqus_thread">Comments</a>
               </li>

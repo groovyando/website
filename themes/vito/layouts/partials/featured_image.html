@@ -5,8 +5,6 @@
 <div class="post-image">
   {{ with .Params.featured_text }}<span class="sticky-status">{{ . }}</span>{{ end }}
   <a href="{{ .Permalink }}" class="" rel="bookmark" title="{{ .Title }}">
-    <!--span><i class="fa fa-chevron-right"></i></span-->
-
     <img width="953" height="536" src="{{ $featuredImage }}" class="attachment-post wp-post-image" alt="{{ .Title }}" />
   </a>
 </div>
