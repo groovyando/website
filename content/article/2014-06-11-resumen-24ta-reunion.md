@@ -4,12 +4,14 @@ author: MIguel-1.mx
 date: 2014-06-11
 url: /2014/06/11/resumen-24ta-reunion/
 categories:
-  - Gradle
-  - Griffon
-  - Groovy
-  - Podcast Grails
+  - Meetup-Wrapup
 tags:
   - reunion
+  - video
+  - vimeo
+  - gradle
+  - griffon
+  - groovy
 ---
 Comenzaba el mes de abril. Un día medio soleado despuntaba para revivir un tiempo que marcó época, el tiempo en que al menos cada mes nos reuníamos y compartíamos sobre la tecnología que nos apasionaba. Y ese sábado, como el primero de ellos, como algunos otros, como parecía que tenía uno o dos meses sin vernos, aquél sábado 5, [Andrés Almiray][2] ([@aalmiray][1]), el padrino de las reuniones, nos habló de [Gradle][3] y [Spock][5].
 
@@ -25,7 +27,7 @@ En las primeras versiones de [Tomcat][11], se generó [Ant][7] con _XML_, a fina
 
 ## Gradle
 
-<iframe src="https://player.vimeo.com/video/93213844" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+{{% vimeo 93213844 %}}
 
 [Gradle][3], con base en la experiencia de los sistemas anteriores, permite una flexibilidad para una meta. [Gradle][3] permite tips para brincar. _Build helper_ permitía juntar proyectos de distintas naturalezas para construir, pero deja de ser agradable por _plugins_ que requieren acceso a múltiples fuentes. Proyectos similares que conduzcan a distintas versiones de _JDK_ todavía requerirán proyectos separados. La mayoría de [Gradle][3] está construido en _Java_, solo tiene una capa de [Groovy][12] encima, para tener una definición declarativa. Pueden escribirse sus _plugins_ en [Groovy][12] o _Java_.
 
@@ -552,7 +554,7 @@ GmavenPlus y la jar de Spock es todo lo que se necesita para integrarlo a un obj
 Springboot – Ratpack – es otro proyecto a considerar.
 
 
-<iframe src="https://player.vimeo.com/video/92464572" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+{{% vimeo 92464572 %}}
 
 Y así de repente se fueron las horas, se quedó con ganas de seguir, y precisamente es el sentimiento que estas breves líneas desean impregnar: es momento de hacer florecer nuestras comunidades. Es tiempo de recuperar y continuar nuestra dinámica&#8230; pero esa, es otra historia, historia que invitamos a colaborar juntos, hombro con hombro.
  
