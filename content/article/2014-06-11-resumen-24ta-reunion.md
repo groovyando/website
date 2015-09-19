@@ -64,7 +64,7 @@ Si se ejecuta [gradle][3] sin argumentos, termina sin argumentos. Puede listar t
 
 Comencemos construyendo el `build.gradle`. Para construir un proyecto _Java_ siguiendo las convenciones de [Maven][6] basta con aplicar un _plugin_.
 
-```gradle
+```groovy
 apply plugin: 'java'
 ```
 
@@ -100,7 +100,7 @@ $ gradle build
 
 En `build.gradle`
 
-```gradle
+```groovy
 apply plugin: 'java'
 
 version = '1.0.0.SNAPSHOT'
@@ -117,7 +117,7 @@ Se muestra el contenido
 
 En `build.gradle`
 
-```gradle
+```groovy
 apply plugin: 'java'
 
 version = '1.0.0.SNAPSHOT'
@@ -139,7 +139,7 @@ El repositorio utiliza las convenciones de [Maven][6]. Si no se configura nada, 
 
 En `build.gradle`
 
-```gradle
+```groovy
 apply plugin: 'java'
 
 version = '1.0.0.SNAPSHOT'
@@ -161,7 +161,7 @@ Cuando se hace un proyecto [Maven][6], no debe especificarse que se trata de un 
 
 En `build.gradle`
 
-```gradle
+```groovy
 apply plugin: 'java'
 
 version = '1.0.0.SNAPSHOT'
@@ -290,7 +290,7 @@ public class Extension {
 
 En `build.gradle`
 
-```gradle
+```groovy
 apply plugin: 'base'
 
 version = '0.0.0.SNAPSHOT'
@@ -316,7 +316,7 @@ El `build.gradle` del _core_ debe estar vacío en los proyectos hijos.
 
 En el _build_ del proyecto hermano:
 
-```gradle
+```groovy
 dependencies {
    compile project(':core')
 }
@@ -326,7 +326,7 @@ Por último, un archivo adicional le dice cuáles son los subproyectos que dirá
 
 `settings.gradle`
 
-```
+```groovy
 include 'core'
 include 'ext'
 ```
@@ -351,7 +351,7 @@ Esas son grandes ventajas. El  proyecto que siga, que supere esto, en sus palab
 
 Para agregar dependencias solo a ciertos hijos
 
-```gradle
+```groovy
 subprojects {suproject ->
    if (subproject.name == 'persistencia' {
       compile 'org.hibernate:hibernate:123'
@@ -363,13 +363,13 @@ subprojects {suproject ->
 
 Para plugin management
 
-```
+```groovy
 ext.hibernateVersion = '123'
 ```
 
 Se pueden agregar propiedades en `gradle.properties`
 
-```
+```groovy
 ext.hibernateVersion = '123'
 ```
 
