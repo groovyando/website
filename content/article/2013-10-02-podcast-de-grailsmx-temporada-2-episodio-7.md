@@ -14,7 +14,7 @@ Hola a todos, les damos la bienvenida @neodevelop y @tomaslin les traemos nuevam
 
 En esta ocasión platicamos de nuestra experiencia en el evento al que tuvimos la oportunidad de asistir como Grails Champions, este es el [SpringOne2GX][1], el cual tuvo sede en Santa Clara y es uno de los eventos más importantes que tiene la comunidad de Spring, Groovy y Grails.
 
-Es grato platicar nuestra versión de lo acontecido y compartirlo con ustedes, además de comentar los sucesos no oficiales que pudimos tener en compañía de la gente que está alrededor del ecosistema Grails. Adicionalmente, durante el networking diario tuvimos el honor de conocer a más desarrolladores que con gusto comparten su conocimiento con nosotros, entre ellos algunos ponentes y la gente de SpringSource ahora renombrada como SpringCentral.<!--more-->
+Es grato platicar nuestra versión de lo acontecido y compartirlo con ustedes, además de comentar los sucesos no oficiales que pudimos tener en compañía de la gente que está alrededor del ecosistema Grails. Adicionalmente, durante el networking diario tuvimos el honor de conocer a más desarrolladores que con gusto comparten su conocimiento con nosotros, entre ellos algunos ponentes y la gente de SpringSource ahora renombrada como SpringCentral.
 
 Compartimos un par de apuntes(en inglés) al respecto de los hechos que tuvieron relevancia durante el evento:
 
