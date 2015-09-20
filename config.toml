@@ -5,6 +5,7 @@ baseurl = "http://groovyando.org"
 languageCode = "es-MX"
 title = "Groovyando"
 theme = "vito"
+paginate = 5
 
 [params]
   languageCode = "es-mx"
