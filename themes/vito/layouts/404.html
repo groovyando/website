@@ -1,1 +1,19 @@
+{{ partial "content-list-top-head.html" . }}
 
+  <title>{{ .Site.Title }} :: Page not found</title>
+
+{{ partial "content-list-top-tail.html" . }}
+
+        <article class="error-404 not-found">
+                <div class="post-inside">
+                        
+                        <h1 class="page-title">Oops! That page can’t be found.</h1>
+                        
+                        <p>It looks like nothing was found at this location.</p>
+                        
+                    <div class="clearfix"></div>
+                </div>
+                            
+             </article>
+
+{{ partial "content-list-bottom.html" . }}
