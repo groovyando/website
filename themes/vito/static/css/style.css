@@ -5460,12 +5460,16 @@ Responsive Styles
     text-align: center;
     margin-top: 0;
     padding-top: 10px;
+    font-size: 1.575rem;
+  }
+  .logo_container .ql_logo {
+    font-size: 2.2rem;
   }
   .ql_tagline_container .ql_tagline {
     text-align: center;
     margin-top: 0;
     padding-top: 5px;
-}
+  }
   #jqueryslidemenu {
     margin-top: 0;
   }
