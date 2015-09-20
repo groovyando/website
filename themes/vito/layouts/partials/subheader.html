@@ -6,12 +6,12 @@
                 <a href="{{ .Site.BaseURL }}" class="ql_logo" rel="home">{{ .Site.Title }}</a>
             </h1>
 
-
             <button id="ql-main-nav-btn" type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#ql-navigation">
                 <i class="fa fa-navicon"></i>
             </button>
 
         </div>
+        
 
         <div class="nav_wrap col-md-8 col-sm-8">
             <div class="collapse navbar-collapse" id="ql-navigation">
@@ -29,6 +29,15 @@
 
         <div class="clearfix"></div>
     </div><!-- row-->
+    <div class="row">
+    <div class="ql_tagline_container col-md-12 col-sm-12">
+
+            {{ with .Site.Params.tagline }}
+            <h2 class="ql_tagline">{{ . }}</h2>
+            {{end}}
+        </div>
+        
+    </div>
 </header>
 
 <div class="clearfix"></div>

@@ -9,7 +9,7 @@ theme = "vito"
 [params]
   languageCode = "es-mx"
   forkGitHubUrl = "https://github.com/groovyando/website"
-  tagline = "Groovy y Grails en tu idioma"
+  tagline = "Difundiendo el universo Groovy en tu lenguaje"
   github = "Groovyando"
   slack = "http://slack.groovyando.org"
   twitter = "Groovyando"

@@ -104,12 +104,18 @@ Header
 }
 .logo_container .ql_logo {
   font-size: 30px;
-  font-size: 1.875rem;
+  font-size: 2.875rem;
   color: #333333;
   font-weight: bold;
   -webkit-transition: all 50ms ease-in-out;
   -o-transition: all 50ms ease-in-out;
   transition: all 50ms ease-in-out;
+}
+.ql_tagline_container .ql_tagline {
+  margin: 10px 2px 30px 2px;  
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 1.3rem;
+  color: #68b1d5;
 }
 .logo_container .ql_logo:hover {
   text-decoration: none;
@@ -5453,8 +5459,13 @@ Responsive Styles
   .logo_container {
     text-align: center;
     margin-top: 0;
-    padding-top: 50px;
+    padding-top: 10px;
   }
+  .ql_tagline_container .ql_tagline {
+    text-align: center;
+    margin-top: 0;
+    padding-top: 5px;
+}
   #jqueryslidemenu {
     margin-top: 0;
   }
