@@ -1,0 +1,5 @@
+{{ partial "content-list-top-head.html" . }}
+
+  <title>{{ .Site.Title }} {{ with .Site.Params.tagline }} :: {{ . | markdownify }}{{ end }}</title>
+
+{{ partial "content-list-top-tail.html" . }}

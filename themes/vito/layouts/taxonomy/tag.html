@@ -1,0 +1,9 @@
+{{ partial "content-list-top-head.html" . }}
+
+  <title>{{ .Site.Title }} :: Content in tag {{ .Title }}</title>
+
+{{ partial "content-list-top-tail.html" . }}
+
+        <h1 class="page-title">Tag: {{ .Title }}</h1>
+
+{{ partial "content-list-bottom.html" . }}
