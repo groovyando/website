@@ -8,48 +8,51 @@ categories:
 tags:
   - regex
 ---
-Las expresiones regulares son un elemento muy poderoso para cualquier lenguaje, sin embargo, también pueden causar un dolor de cabeza al momento de formularlas, especialmente si lo hacemos en Java.
+Las expresiones regulares son un elemento muy poderoso para cualquier lenguaje, sin embargo, también pueden causar un dolor de cabeza al momento de formularlas, especialmente si lo hacemos en `Java`.
 
-Groovy viene a alivianar esta carga con un par de operadores  y patrones más sencillos de escribir.
+`Groovy` viene a alivianar esta carga con un par de operadores  y patrones más sencillos de escribir.
 
-  * El operador regex =~
-  * El operador match ==~
-  * El operador patrón ~String
-  * Slashy /String/
+  * El operador `regex =~`
+  * El operador `match ==~`
+  * El operador patrón `~String`
+  * `Slashy /String/`
 
 Las expresiones regulares son definidas por patrones. Un patrón puede ser cualquier cosa desde un simple carácter, una cadena, o algo con un formato específico.
 
 Para esto les pongo un ejemplo:
 
-<pre class="brush: groovy; ruler: true;">def usoDePatternDespuesMatcher(pattern,texto){
-    def matcher = texto =~ pattern // Creación del matcher
-    println "Ha coincidido ${matcher.size()} veces"
-    println "Con los elementos:"
-    matcher.each{
-        println "\t * ${it}"
-    }
+```groovy
+def usoDePatternDespuesMatcher(pattern, texto) {
+  def matcher = texto =~ pattern // Creación del matcher
+  
+  println "Ha coincidido ${matcher.size()} veces"
+  println "Con los elementos:"
+  
+  matcher.each {
+    println "\t * ${it}"
+  }
 }
 
 def texto = """\
-Bienvenido a GrailsMx, el lugar donde 
-hablamos del lenguaje dinámico 
-Groovy y el framework Grails, 
-esta comunidad nació el 16-09-2008
-con @domix y @neodevelop"""
+  Bienvenido a GrailsMx, el lugar donde 
+  hablamos del lenguaje dinámico 
+  Groovy y el framework Grails, 
+  esta comunidad nació el 16-09-2008
+  con @domix y @neodevelop"""
 
-def pattern = ~"Groovy" // Coincidencia con una palabra exacta
-usoDePatternDespuesMatcher(pattern,texto)
+  def pattern = ~"Groovy" // Coincidencia con una palabra exacta
+  usoDePatternDespuesMatcher(pattern,texto)
 
-// Cambiemos el patrón
-pattern = /Groovy|Grails/ // Creamos un nuevo matcher con Slashy
-usoDePatternDespuesMatcher(pattern,texto)
+  // Cambiemos el patrón
+  pattern = /Groovy|Grails/ // Creamos un nuevo matcher con Slashy
+  usoDePatternDespuesMatcher(pattern,texto)
 
-pattern = /\d\d-\d\d-\d\d\d\d/ // Un patrón de fechas simples
-usoDePatternDespuesMatcher(pattern,texto)
+  pattern = /\d\d-\d\d-\d\d\d\d/ // Un patrón de fechas simples
+  usoDePatternDespuesMatcher(pattern,texto)
 
-pattern = /\w\S*/ // Todas las palabras
-usoDePatternDespuesMatcher(pattern,texto)
-</pre>
+  pattern = /\w\S*/ // Todas las palabras
+  usoDePatternDespuesMatcher(pattern,texto)
+```
 
 Aquí una lista con los símbolos que más he usado en expresiones regulares:
 
@@ -83,17 +86,19 @@ Cuando conjugamos un patrón y un String podemos hacer las siguientes tareas:
 
 Una de las cosas que me gustan mucho con expresiones regulares en Groovy son situaciones como esta:
 
-<pre class="brush: groovy; ruler: true;">def jvmLanguages = ['scala','groovy','jruby','clojure','jython']
+```groovy
+def jvmLanguages = ['scala','groovy','jruby','clojure','jython']
 def frameworks = ['springframework','akka','play','gpars','jquery']
 
 def pattern1 = ~/.*j.*/
 
 assert (jvmLanguages &lt;&lt; frameworks).flatten().grep(pattern1) == ["jruby", "clojure", "jython", "jquery"]
-</pre>
+```
 
 O bien, el clásico del correo electrónico:
 
-<pre class="brush: groovy; ruler: true;">def email = 'cursos@synergyj.com'
+```groovy
+def email = 'cursos@synergyj.com'
 def pattern = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[A-Za-z]{2,4}/
 assert email ==~ pattern
-</pre>
+```
