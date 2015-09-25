@@ -2,7 +2,7 @@
 title: Introducción a Gradle
 author: domix
 date: 2015-09-25
-url: /screencast/2015/09/25/introduccion-a-gradle/
+url: /2015/09/25/screencast-introduccion-a-gradle/
 featured_image: /2015/09/25/gradle-build-tool.jpg
 featured_text: Build tools
 featured_image_origin: https://www.flickr.com/photos/preusmuseum/6620250731/
