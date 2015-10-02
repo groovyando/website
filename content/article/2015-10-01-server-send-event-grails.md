@@ -6,19 +6,23 @@ url: /2015/10/01/server-send-event-grails/
 featured_image: /2015/10/01/monkeys.jpg
 featured_text: Comunicación
 categories:
-  - grails  
+  - article  
 tags:
   - protocolos
+  - http-streaming
+  - sse
+  - server-send-event
+  - grails
 ---
 
 ## Motivación
 
-La principal motivación para mostrar como usar este protocolo con **Grails** es simplemente dar al lector otra opción para comunicarse entre el **servidor** y el **cliente**. No pretendo explicar detalles sobre el protocolo en sí, para ese propósito vea [Stream Updates with Server-Send Events](http://www.html5rocks.com/en/tutorials/eventsource/basics/).
+La principal motivación para mostrar como usar este protocolo con `Grails` es simplemente dar al lector otra opción para comunicarse entre el **servidor** y el **cliente**. No pretendo explicar detalles sobre el protocolo en sí, para ese propósito vea [Stream Updates with Server-Send Events][1].
 
 ---
-Espero que el código por si solo se explique, pero si no conoces el protocolo debes leer [Stream Updates with Server-Send Events](http://www.html5rocks.com/en/tutorials/eventsource/basics/) antes de continuar.
+Espero que el código por si solo se explique, pero si no conoces el protocolo debes leer [Stream Updates with Server-Send Events][1] antes de continuar.
 
-El resultado final es un tipo reloj que muestra la fecha y hora cada segundo, lo padres es que el *strem* no se detienen "nunca" y si esta idea la aplicas a cosas más complejas puedes crear cosas muy padres, por ejemplo no tener que pintar un reporte de un solo golpe.
+El resultado final es un tipo reloj que muestra la fecha y hora cada segundo, lo padre es que el `strem` no se detienen *"nunca"* y si esta idea la aplicas a cosas más complejas puedes crear cosas muy padres, por ejemplo no tener que pintar un reporte de un solo golpe.
 
 ---
 ## Controlador
@@ -29,27 +33,25 @@ package sse
 import test.Utils
 
 class TestController {
+  def index() {}
 
-    def index() {}
+  def cartero() {
+    response.contentType = 'text/event-stream;charset=UTF-8'
+    response.setHeader("Cache-Control", "no-cache")
 
+    render Utils.format_event('titulo_event')
+    render Utils.format_data('Fecha y hora:')
 
-    def cartero() {
-        response.contentType = 'text/event-stream;charset=UTF-8'
-        response.setHeader("Cache-Control", "no-cache")
-
-        render Utils.format_event('titulo_event')
-        render Utils.format_data('Fecha y hora:')
-
-        while (true) {
-            render Utils.format_event('fecha_hora_event')
-            render Utils.format_data("""
-                {
-                    "fecha": "${new Date().format('yyyy-MM-dd HH:mm:sss')}"
-                }
-            """)
-            sleep(1000)
+    while (true) {
+      render Utils.format_event('fecha_hora_event')
+      render Utils.format_data("""
+        {
+          "fecha": "${new Date().format('yyyy-MM-dd HH:mm:sss')}"
         }
+        """)
+      sleep(1000)
     }
+  }
 }
 ```
 ---
@@ -59,19 +61,21 @@ package test
 
 class Utils {
 
-    static String format_event(str) {
-        return "event: ${str.trim()}\n"
-    }
+  static String format_event(str) {
+    "event: ${str.trim()}\n"
+  }
 
-    static String format_data(str) {
-        def ln = '\n'
-        def p = str.split(ln)*.trim().findAll {
-            it != ''
-        }.collect {
-            "data: ${it}"
-        } << ln
-        return p.join('\n')
-    }
+  static String format_data(str) {
+    def ln = '\n'
+    def p = str.split(ln)*.trim()
+      .findAll {
+        it != '' }
+      .collect {
+        "data: ${it}"
+      } << ln
+    
+    p.join('\n')
+  }
 }
 ```
 
@@ -117,3 +121,5 @@ class Utils {
 ## Resultado final
 
 ![Resultado](/2015/10/01/fecha_hora.png)
+
+[1]: http://www.html5rocks.com/en/tutorials/eventsource/basics/
