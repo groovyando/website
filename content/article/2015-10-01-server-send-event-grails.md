@@ -22,7 +22,7 @@ La principal motivación para mostrar como usar este protocolo con `Grails` es s
 ---
 Espero que el código por si solo se explique, pero si no conoces el protocolo debes leer [Stream Updates with Server-Send Events][1] antes de continuar.
 
-El resultado final es un tipo reloj que muestra la fecha y hora cada segundo, lo padre es que el `strem` no se detienen *"nunca"* y si esta idea la aplicas a cosas más complejas puedes crear cosas muy padres, por ejemplo no tener que pintar un reporte de un solo golpe.
+El resultado final es un tipo reloj que muestra la fecha y hora cada segundo, lo padre es que el `stream` no se detiene *"nunca"* y si esta idea la aplicas a cosas más complejas puedes crear cosas muy padres, por ejemplo no tener que pintar un reporte de un solo golpe.
 
 ---
 ## Controlador
