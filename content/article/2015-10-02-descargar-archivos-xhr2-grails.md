@@ -17,7 +17,7 @@ tags:
 ---
 
 ## Motivación
-Mostrar como descargar una archivo con `Grails` usando [XHR2][1] y una implementación del `saveAs()` [FileSaver.js][2] de HTML5. Noten toda la flexibilidad que se tiene usando [XHR2][1], desde monitorear el progreso de descarga hasta cancelarla.
+Mostrar como descargar una archivo con `Grails` usando [XHR2][1] y una implementación del `saveAs()` [FileSaver.js][2] de `HTML5`. Noten toda la flexibilidad que se tiene usando [XHR2][1], desde monitorear el progreso de descarga hasta cancelarla.
 
 ---
 ## Antes de continuar
@@ -35,7 +35,7 @@ class IndexController {
     def index() {}
 
     def descarga() {
-        def zipFile = new File('/tmp/file   .zip')
+        def zipFile = new File('/tmp/file.zip')
         header("X-File-Name", zipFile.name)
         response.contentType = 'application/octet-stream'
         zipFile.withInputStream { response.outputStream << it }
