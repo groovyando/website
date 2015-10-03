@@ -77,6 +77,6 @@ class IndexController {
 </html>
 ```
 
-[1]: http://www.w3.org/TR/XMLHttpRequest2/
+[1]: https://developer.mozilla.org/es/docs/XMLHttpRequest/Using_XMLHttpRequest
 [2]: https://github.com/eligrey/FileSaver.js/
 [3]: http://www.html5rocks.com/es/tutorials/file/xhr2/#toc-bin-data
