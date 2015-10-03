@@ -4,7 +4,7 @@ author: rodrigo_salado
 date: 2015-10-02
 url: /2015/10/02/descargar-archivos-xhr2-grails/
 featured_image: http://img354.imageshack.us/img354/676/apems2604ud8.jpg
-featured_text: Comunicación
+featured_text: Descarga de archivos
 categories:
   - article  
 tags:
@@ -13,6 +13,7 @@ tags:
   - xhr2
   - xml-http-request-2
   - grails
+  - descarga
 ---
 
 ## Motivación
@@ -20,7 +21,7 @@ Mostrar como descargar una archivo con `Grails` usando [XHR2][1] y una implement
 
 ---
 ## Antes de continuar
-Conviene mucho que leas [Recuperación de archivos - Nuevos trucos para XMLHttpRequest2][3] que ya no es tan nuevo pero si muy útil. Por favor lee las ligas que comento ya que espero que el código lo puedas copiar, pegar y jugar. No daré explicaciones, excepto vía comentarios, hay si pregunten todo lo que quieran, yo u otro miembro de la comunidad contestara. 
+Conviene mucho que leas [Recuperación de archivos - Nuevos trucos para XMLHttpRequest2][3], que ya no es tan nuevo pero si muy útil. Por favor lee las ligas que comento ya que espero que el código lo puedas copiar, pegar y jugar.
 
 Descarga la ultima versión estable de [FileSaver.js][2].
 
