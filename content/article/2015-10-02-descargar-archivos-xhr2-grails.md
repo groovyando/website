@@ -16,11 +16,11 @@ tags:
 ---
 
 ## Motivación
-Mostrar como descargar una archivo con `Grails` usando [XHR2][1] y una implementación del `saveAs()` [FileSaver.js][2] de HTML5.
+Mostrar como descargar una archivo con `Grails` usando [XHR2][1] y una implementación del `saveAs()` [FileSaver.js][2] de HTML5. Noten toda la flexibilidad que se tiene usando [XHR2][1], desde monitorear el progreso de descarga hasta cancelarla.
 
 ---
 ## Antes de continuar
-Conviene mucho que leas [Recuperación de archivos - Nuevos trucos para XMLHttpRequest2][3] que ya no es tan nuevo pero si muy útil. Por favor lee las ligas que comento ya que espero que el código lo puedas copiar, pegar y jugar. No daré explicaciones, excepto vía comentarios, hay si pregunten todo lo que quieran, yo u otro miembro de la comunidad contestara.
+Conviene mucho que leas [Recuperación de archivos - Nuevos trucos para XMLHttpRequest2][3] que ya no es tan nuevo pero si muy útil. Por favor lee las ligas que comento ya que espero que el código lo puedas copiar, pegar y jugar. No daré explicaciones, excepto vía comentarios, hay si pregunten todo lo que quieran, yo u otro miembro de la comunidad contestara. 
 
 Descarga la ultima versión estable de [FileSaver.js][2].
 
@@ -52,7 +52,7 @@ class IndexController {
 </head>
 
 <body>
-	<button>Descagar</button>
+  <button>Descagar</button>
 </body>
 
 <script src="${resource(dir: 'js', file: 'FileSaver.js')}"></script>
