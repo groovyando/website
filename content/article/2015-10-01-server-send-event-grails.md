@@ -74,7 +74,7 @@ class Utils {
         "data: ${it}"
       } << ln
     
-    p.join('\n')
+    p.join(ln)
   }
 }
 ```
