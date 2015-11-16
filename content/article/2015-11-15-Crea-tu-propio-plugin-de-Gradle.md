@@ -1,6 +1,6 @@
 ---
 title: Crea tu propio plugin de Gradle
-author: [markitox|kox|markox]
+author: markitox
 date: 2015-11-15
 url: /2015/11/15/crea-tu-propio-plugin-de-gradle/
 featured_image: /2015/11/15/AzadiSquare-Tehran-124306.jpg
