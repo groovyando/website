@@ -33,5 +33,10 @@ Guillaume Laforge anuncio en la lista de desarrolladores las metricas de descarg
 
 ¿Que planes tienes para este 2016 con Groovy?
 
+<!--more-->
+
 [1]: http://www.tiobe.com/index.php/content/paperinfo/tpci/programminglanguages_definition.html
 [2]: http://groovy.apache.org
+
+
+
